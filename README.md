@@ -1,13 +1,13 @@
-💈 Gallo 420 Barbershop – All-in-One E-Commerce Platform
+##💈 Gallo 420 Barbershop – All-in-One E-Commerce Platform
 
-🧾 General Overview
+##🧾 General Overview
 
 Gallo 420 Barbershop, located in Iztapalapa, Lomas Estrellas, has been a trusted name in men’s grooming, personal care, and specialized service for over 4 years.
 This project aims to evolve the physical barbershop into a 24/7 digital platform that enables online sales, appointment booking, service packages, and supplier management with greater accessibility and reliability.
 
 ⸻
 
-🧠 Project Justification
+##🧠 Project Justification
 
 As the barbershop’s reputation continues to grow, so does the need to:
 	•	Modernize its digital presence.
@@ -19,17 +19,17 @@ As the barbershop’s reputation continues to grow, so does the need to:
 
 ⸻
 
-📌 Mission
+##📌 Mission
 
 Transform men’s lives through a haircut or beard grooming.
 A good appearance enhances self-esteem and builds personal confidence.
 
-🎯 Vision
+##🎯 Vision
 
 To innovate in style and customer service, positioning Gallo 420 as one of the most recommended barbershops in the Mexico City metropolitan area.
 To become a reference center for men’s style creation and image transformation.
 
-🧭 Core Values
+##🧭 Core Values
 	•	Personalized customer service
 	•	Commitment to cleanliness and order
 	•	Fostering mutual trust
@@ -38,7 +38,7 @@ To become a reference center for men’s style creation and image transformation
 
 ⸻
 
-👥 Target Audience
+##👥 Target Audience
 
 1. End Customers:
 	•	Children aged 6 and up
@@ -50,7 +50,7 @@ To become a reference center for men’s style creation and image transformation
 
 ⸻
 
-🧩 Key Features
+##🧩 Key Features
 
 ✅ Online store
 ✅ Appointment management (barber, time, service type)
