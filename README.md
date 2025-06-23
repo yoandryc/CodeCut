@@ -1,12 +1,12 @@
-# 💈 Gallo 420 Barbershop – All-in-One E-Commerce Platform
+# 💈 Code & Cut Barbershop – All-in-One E-Commerce Platform
 
-Welcome to the official GitHub repository of **Gallo 420 Barbershop**, a full-featured digital platform designed to extend the barbershop experience into the online world. Built for clients and partners alike, this solution brings modern convenience to traditional grooming services.
+Welcome to the official GitHub repository of **Code & Cut Barbershop**, a full-featured digital platform designed to extend the barbershop experience into the online world. Built for clients and partners alike, this solution brings modern convenience to traditional grooming services.
 
 ---
 
 ## 🧾 General Overview
 
-**Gallo 420 Barbershop**, located in Iztapalapa, Lomas Estrellas, has been a trusted name in men’s grooming and personal care for over 4 years. This platform transforms our physical barbershop into a 24/7 digital hub, providing:
+**Code & Cut Barbershop**, located in Iztapalapa, Lomas Estrellas, has been a trusted name in men’s grooming and personal care for over 4 years. This platform transforms our physical barbershop into a 24/7 digital hub, providing:
 
 - 🛒 Online product sales  
 - 📅 Appointment scheduling  
