@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap');
+
+html,
+body {
+  background: #0D121E !important;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+body {
+  background: #0D121E;
+  color: #fff;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+div {
+  background-color: #0D121E !important;
+}
+
+header h1,
+.subtitulo,
+.section-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: #BEA654;
+  letter-spacing: 1px;
+}
