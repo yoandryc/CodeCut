@@ -1,16 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap');
+
+html,
 body {
-  background-color: #0D121E !important;
-  color: #fff !important;
+  background: #0D121E !important;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+body {
+  background: #0D121E;
+  color: #fff;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 div {
   background-color: #0D121E !important;
 }
+
+header h1,
+.subtitulo,
+.section-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: #BEA654;
+  letter-spacing: 1px;
 }
 
-#titulo,
-.subtitulo {
-  color: #7C7B79;
+.section-title {
+  font-size: 1.2rem;
+  color: #D9D9D9;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .tarjeta {
@@ -26,4 +49,113 @@ div {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 8px;
+}
+
+.img-barberia {
+  width: 100%;
+  max-width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 4px solid #F0B35B;
+  background: #272727;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  background: #181B23 !important;
+  color: #fff;
+  border: none !important;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px #0008;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #BEA65455;
+}
+
+.card-title {
+  color: #F0B35B;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  background: #272727;
+  border: none;
+}
+
+.card-body {
+  text-align: left;
+  padding: 1.2rem;
+}
+
+.card-text {
+  color: #D9D9D9;
+  font-size: 1rem;
+}
+
+.card .nombre {
+  color: #F0B35B;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.row-cols-1 .col,
+.row-cols-md-2 .col,
+.row-cols-md-3 .col,
+.row-cols-md-4 .col {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: transparent !important;
+  padding: 0 0.5rem;
+}
+
+main {
+  background: transparent !important;
+}
+
+@media (max-width: 992px) {
+  .img-barberia {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipo-foto {
+    height: 160px;
+  }
+
+  .card-img-top {
+    height: 120px;
+  }
+
+  .img-barberia {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 140px;
+  }
 }
