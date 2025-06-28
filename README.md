@@ -1,5 +1,5 @@
-# 💈 Code & Cut Barbershop – All-in-One E-Commerce Platform
-
+# 💈 Code & Cut Barbershop  
+### All-in-One E-Commerce Platform
 Welcome to the official GitHub repository of **Code & Cut Barbershop**, a full-featured digital platform designed to extend the barbershop experience into the online world. Built for clients and partners alike, this solution brings modern convenience to traditional grooming services.
  
 ---
