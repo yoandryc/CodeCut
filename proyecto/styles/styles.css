@@ -1,35 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap');
-
-html,
 body {
-  background: #0D121E !important;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  min-height: 100vh;
-}
-body {
-  background: #0D121E;
-  color: #fff;
+  background-color: #0D121E;
   font-family: 'Open Sans', Arial, sans-serif;
+  color: #FFFFFF;
+    padding-top: 80px;
 }
-div {
-  background-color: #0D121E !important;
-}
-
 header h1,
 .subtitulo,
 .section-title {
   font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: 400; /* Para regular */
   color: #BEA654;
   letter-spacing: 1px;
 }
 
-.section-title {
-  font-size: 1.2rem;
-  color: #D9D9D9;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 600;
+/* CSS del Navbar*/
+.navbar {
+  background-color: #000000;
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbarLogoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.navTextLogo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F0B35B !important;
+}
+
+/* Aplica color dorado al enlace activo */
+.nav-link.active {
+  color: #F0B35B !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*Termina CSS de Navbar*/
+
+.hero {
+  position: relative;
+  background-image: url('/imgs/CTA.png'); /* Cambia la ruta a la de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  height: 300px; /* Ajusta la altura según lo que necesites */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Texto blanco */
+  font-size: 3rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negritas */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destacar el texto */
+  
+}
+.hero h1 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-weight: 400; /* máximo grosor */
+  font-size: 2.5rem; /* ajusta el tamaño */
+  text-transform: uppercase; /* si quieres todo en mayúsculas */
+  letter-spacing: 1px; /* separa letras como en el diseño */
+  color: #FFFFFF; /* blanco sólido */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
