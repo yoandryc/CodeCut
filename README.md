@@ -96,4 +96,4 @@ We welcome contributions! If you’d like to improve or expand the platform, fee
 
 ---
 
-> “Confidence begins with a clean cut.” — *Gallo 420 Barbershop*
+> “Confidence begins with a clean cut.” — *Code & Cut Barbershop*
