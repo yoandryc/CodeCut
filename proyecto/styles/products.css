@@ -5,7 +5,7 @@ body {
   background: #0D121E !important;
   color: #fff;
   margin: 0;
-  padding: 0;
+  padding-top: 5rem ;
   box-sizing: border-box;
   min-height: 100vh;
 }
@@ -16,14 +16,51 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-div {
-  background-color: #0D121E !important;
-}
-
 header h1,
 .subtitulo,
 .section-title {
   font-family: 'Bebas Neue', Arial, sans-serif;
+    font-weight: 400; /* Para regular */
   color: #BEA654;
   letter-spacing: 1px;
+}
+
+/* CSS del Navbar*/
+.navbar {
+  background-color: #000000;
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbarLogoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.navTextLogo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F0B35B !important;
+}
+
+/* Aplica color dorado al enlace activo */
+.nav-link.active {
+  color: #F0B35B !important;
+  font-weight: bold;
+  text-decoration: underline;
 }
