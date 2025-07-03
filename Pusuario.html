@@ -11,13 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Pusuario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>CodeCut.Usuario</title>
 </head>
 <body>
    <!-- Apartado del Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <!-- Imagen jpg del logo para el navbar-->
-            <img src="code&cuteLogo~2.jpg" alt="Logo" class="navbarLogoImg">
+            <img src="code&cuteLogo.jpg" alt="Logo" width="50" height="50" class="navbarLogoImg">
             <span class="navTextLogo ms-2">Code & Cut</span>
         </a>
 
@@ -48,7 +49,7 @@
                     <a class="nav-link active" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign up</a>
+                    <a class="nav-link" href="#">Cerrar sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
@@ -62,24 +63,25 @@
         </div>
                 </li>
             </ul>
-    </nav>
+    </nav> <br>
     <!--Fin del apartado de navbar-->
     
-    <h1 id="welcome" > Bienvenido usuario</h1>
+    <h1> Bienvenido -usuario-</h1><!--*Necesita cambios para cambiar "usuario" por el nombre de usuario al registrarse-->
+    <!--inicio de perfil para compartir en redes-->
     <div class="profile">
         <div>
             <div class="row">
-                <section class="col-4">
-                <i class="fi fi-rr-user"> </i>
-                </section>
-                <section class="col">
+                <div class="col-4">
+                <i class="fi fi-rr-user" > </i> <!--*Foto de perfil o avatar que elusuario escoja-->
+                </div>
+                <div class="col">
                 Lo que mi corte dice de mí
-                </section>
+                </div>
             </div>
         </div>
        
         <div class="row">
-            <div class="col"> Fecha de ultimo corte</div>
+            <div class="col"> </div>
             <div class="col-8">Mis 5 productos top
             <ul>
                 <li><i class="fi fi-bs-terminal"></i> ... </li>
@@ -94,6 +96,7 @@
             <p>Galería personal</p>
             <img src="..."  alt="...">
             <img src="..."  alt="...">
+            <!--*Necesita que haya interactividad para que el usurio pueda subir sus fotos-->
             </div>
         </div><br>
         <div>
@@ -103,10 +106,23 @@
         </div>
     </div>
  </div>
- <div class="profile">
-    <button> Ir a productos </button>
+ <!--fin de perfil para compartir en redes-->
+
+ <!--Pequeña seeción para navegar dentro de la página pero ahora desde el perfil de usuario-->
+ <div class="back-page">
+  <div class="row">
+  <div class=col>
+    <button class="back-page"> Ir a productos </button>
+  </div>
+  <div class="col">
     <button>Ir a servicios</button>
+  </div>
+  </div>
  </div> 
+ <!-- *Falta hacer la relación para que al picar en el boton se puedan mover a productos o servicios
+ Fin de  pequeña sección-->
+
+ <!--Inicio sección detalles-->
  <div class="profile">
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -141,49 +157,64 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        Aquí encuentras las <strong>compras</strong> que has hecho los ultimos 6 meses
+        Aquí encuentras las <strong>compras de productos y servicios</strong> que has hecho los ultimos 6 meses:
+        <!--Inicio de historial-->
+        <!--*necesita que se pueda acotar a unas fechas (ultimos 6 meses)-->
         <table class="table caption-top">
-  <caption>List of users</caption>
+  <caption>Tu lista se actualiza cada mes</caption>
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Número de compra</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Fecha de compra</th>
+      <th scope="col">Número de piezas</th>
+      <th scope="col">Costo total</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Producto 1</td>
+      <td>día/mes/año</td>
+      <td># de piezas</td>
+      <td>$$$$</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Producto 1</td>
+      <td>día/mes/año</td>
+      <td># de piezas</td>
+      <td>$$$$</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>John</td>
-      <td>Doe</td>
-      <td>@social</td>
+      <td>Producto 1</td>
+      <td>día/mes/año</td>
+      <td># de piezas</td>
+      <td>$$$$</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Producto 1</td>
+      <td>día/mes/año</td>
+      <td># de piezas</td>
+      <td>$$$$</td>
     </tr>
   </tbody>
 </table>
+<!--fin de tabla de historial-->
       </div>
     </div>
   </div>
 </div>
         
  </div>
+ <!--Fin de sección detalles-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <foot>
-    códigos limpios, cortes perfectos
+    @Copyright
 </foot>
 </html>

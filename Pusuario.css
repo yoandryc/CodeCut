@@ -1,10 +1,19 @@
-#welcome {
+body{
+  background-color: #0d121e;
+}
+
+h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #ffff;
+  padding: 20px; 
+  margin: 20px;
 }
 
-
+.backpage{
+  align-content: center;
+}
 .opensans{
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -17,8 +26,8 @@
 .profile {
   border: 5px solid black; 
   padding: 20px; 
-  margin: 20px; 
-  background: #f8f9fa;
+  margin: 20px;
+  background: #bea654;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
