@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -14,16 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/signup.css" />
 
     <!-- Iconos para el navbar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
 </head>
-
 <body>
- <!-- Apartado del Navbar-->
+    <!-- Apartado del Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
         <a class="navbar-brand d-flex align-items-center" href="#">
             <!-- Imagen jpg del logo para el navbar-->
@@ -52,16 +48,16 @@
                     <a class="nav-link" href="#">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
+                    <a class="nav-link" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="login.html">Login</a>
+                    <a class="nav-link" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="signup.html">Sign up</a>
+                    <a class="nav-link active" href="signup.html">Sign up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.html">
+                    <a class="nav-link" href="#">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
@@ -70,13 +66,25 @@
     </nav>
     <!-- Termina Navbar-->
 
-    <!-- Apartado del Login-->
+    <!-- Apartado del Signup-->
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="card p-4 shadow login-card">
-            <h2 class="text-center mb-4 textIniciarSesion">Iniciar sesión</h2>
-            <img src="imgs/iconUserLogin.png" alt="Icon User Login">
+        <div class="card p-4 shadow signup-card">
+            <h2 class="text-center mb-4 textRegistro">Registrarse</h2>
+            <!-- img src="imgs/iconUserLogin.png" alt="Icon User Login" -->
             <!-- Formulario -->
-            <form>
+            <form id="signupForm">
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Apellido(s)">
+                </div> 
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre(s)">
+                </div>  
+                <div class="mb-3">
+                    <label for="Phone Number" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="333333333">
+                </div>                                                
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="example@example.com">
@@ -85,10 +93,21 @@
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password" placeholder="password">
                 </div>
-                <button type="submit" class="btn btn-primary ">Iniciar Sesión</button>
+            <div class="mb-3">
+                <div class="signup-text">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">Acepto términos y condiciones</label>
+                </div>
+            </div>
+                <button type="submit" class="btn btn-primary ">Registrarse</button>
+                <div class="signup-text">
+                    <p>¿Ya tienes una cuenta? <a href="login.html">Login</a></p>
+                </div>
             </form>
         </div>
     </div>
-</body>
 
+    <!--JavaScript-->
+    <script src="signup.js"></script>
+</body>
 </html>
