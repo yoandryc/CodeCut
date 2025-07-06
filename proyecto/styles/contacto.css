@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet');
+  
+body {
+  background-color: #000000;
+  margin: 0;
+}
+.navbarLogoImg {
+  height: 120px; 
+  width: auto;
+}
+
+  
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+     text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    font-family:'Bebas Neue', Arial, sans-serif;
+    color: white;
+}
+
+.hero h1 {
+font-size: 3rem;
+font-weight: bold;
+}
+
+.hero p {
+font-size: 1.2rem;
+margin-top: 10px;
+}
+
+@media (max-width: 1400px) {
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.hero {
+height: 40vh;
+padding: 20px;
+ }
+}
+
+@media (min-width: 576px) {
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+.hero {
+height: 40vh;
+padding: 20px;
+ }
+}
+
+/* INICIO DE CSS PARA EL FOOTER*/
+.fondo-copy {
+background-color: rgb(0, 0, 0);
+height: 100%;
+} 
+
+.ICONOS {
+color: white;
+}
+
+.ICONOS:hover {
+color: #85aff7; 
+} 
+
+.form-label{
+    color:white
+}
+
