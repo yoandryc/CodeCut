@@ -3,6 +3,8 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
   color: #FFFFFF;
     padding-top: 80px;
+    height: 100%;
+    margin: 0;
 }
 header h1,
 .subtitulo,
@@ -56,10 +58,10 @@ header h1,
 
 .hero {
   position: relative;
-  background-image: url('/imgs/CTA.png'); /* Cambia la ruta a la de tu imagen */
+  background-image: url('../imgs/CTA.png'); /* Cambia la ruta a la de tu imagen */
   background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
   background-position: center; /* Centra la imagen */
-  height: 300px; /* Ajusta la altura según lo que necesites */
+  height: 400px; /* Ajusta la altura según lo que necesites */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,4 +79,193 @@ header h1,
   letter-spacing: 1px; /* separa letras como en el diseño */
   color: #FFFFFF; /* blanco sólido */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+/** productos */
+/* Fondo y colores generales */
+.productos-section {
+  background-color: #0b0f1a; /* Fondo oscuro */
+  color: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Imágenes uniformes y limitadas */
+.producto-img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Limitar altura para mantener uniformidad */
+  max-height: 220px; /* Ajusta según tu diseño */
+  width: 100%;
+  object-fit: cover; /* Recorta si es necesario sin deformar */
+}
+
+/* Efecto hover */
+.producto-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Texto */
+.productos-section h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.productos-section p {
+  margin-bottom: 1rem;
+}
+
+/** servicios */
+.flash-card {
+  transition: transform 0.4s ease-in-out;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.flash-card:hover {
+  transform: scale(1.05);
+}
+
+.flash-card img {
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1rem;
+}
+ /*!Carusel */
+.carousel-item {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.content-slide {
+  position: relative;
+  z-index: 2;
+  padding: 100px 80px;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+}
+
+.main-img {
+    width: 100%;
+  max-width: 350px;
+  height: 420px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 768px) {
+  .text-section h1 {
+    font-size: 2rem;
+  }
+  .text-section p {
+    font-size: 1rem;
+  }
+  .main-img {
+    width: 90%;
+  }
+}
+/* ?footer */
+.footer {
+  background-color: #0B0F1A;
+  position: relative;
+}
+
+.footer-logo {
+  width: 60px;
+  height: auto;
+  filter: brightness(1.1);
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #F0B35B;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+   position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Responsivo para íconos */
+@media (max-width: 576px) {
+  .social-icon {
+    font-size: 1.2rem;
+    margin: 0 6px;
+  }
+
+  .footer-logo {
+    width: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-item {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .main-img {
+    max-width: 90%;
+    height: auto;
+  }
 }

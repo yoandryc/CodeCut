@@ -1,0 +1,109 @@
+body {
+  background-color: #0D121E;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+/* CSS del Navbar*/
+.navbar {
+  background-color: #000000;
+}
+
+.navbarLogoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.navTextLogo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F0B35B !important;
+}
+
+/* Aplica color dorado al enlace activo */
+.nav-link.active {
+  color: #F0B35B !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*Termina CSS de Navbar*/
+
+
+
+/* CSS del Registro*/
+.textRegistro {
+  color: #FFFFFF;
+}
+
+.signup-card {
+  background-color: #000000;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #F0B35B;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.signup-card .form-label {
+  color: #FFFFFF;
+}
+
+
+.signup-card input.form-control {
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.signup-card input.form-control:focus {
+  background-color: #0D121E;
+  color: #FFFFFF;
+  box-shadow: none;
+  border: 1px solid #F0B35B;
+}
+
+.btn-primary {
+  background-color: #F0B35B;
+  border: none;
+  margin-bottom: 2rem;
+  padding: 8px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #be6f00;
+  color: #FFFFFF;
+}
+
+.btn-primary:active {
+  background-color: #a65a00 !important;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
+
+.signup-text{
+    color: #FFFFFF;
+    text-align: center;
+}

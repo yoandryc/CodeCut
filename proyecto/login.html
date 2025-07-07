@@ -23,10 +23,9 @@
 </head>
 
 <body>
-
-    <!-- Apartado del Navbar-->
+ <!-- Apartado del Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
             <!-- Imagen jpg del logo para el navbar-->
             <img src="imgs/logoCode&CutNavbar.png" alt="Logo" class="navbarLogoImg">
             <span class="navTextLogo ms-2">Code & Cut</span>
@@ -44,25 +43,25 @@
                     <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de</a>
+                    <a class="nav-link" href="aboutUs.html">Acerca de</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="servicios.html">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                    <a class="nav-link" href="productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign up</a>
+                    <a class="nav-link" href="signup.html">Sign up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="cart.html">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>
@@ -86,10 +85,52 @@
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password" placeholder="password">
                 </div>
-                <button type="submit" class="btn btn-primary ">Iniciar Sesión</button>
+                <button onclick="location.href='admin.html'" type="submit" class="btn btn-primary">Iniciar Sesión</button>
             </form>
         </div>
     </div>
 </body>
+<!--*Footer-->
+<footer class="footer bg-black text-white py-4 mt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram fa-2x ICONOS"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook fa-2x ICONOS"></i>
+        </a>
+      </div>
+      <div class="iconos d-flex justify-content-center gap-8 my-8 VISITANOS">
+          <h2>VISÍTANOS</h2>
+      </div>
+    </div>
 
+    <div class="mb-3">
+      <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="60" height="70" class="footer-logo">
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a href="https://maps.google.com" target="_blank" class="social-icon">
+          <i class="bi bi-geo-alt-fill"></i>
+        </a>
+      </div>
+      </div >
+            <p class="copyright d-flex justify-content-center ">
+            &copy; 2025 Code&Cuts Barbería. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/5210000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</footer>
+<!--*Fin de footer-->
 </html>
