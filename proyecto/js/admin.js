@@ -1,11 +1,32 @@
-// js/admin.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('item-form');
   const itemsList = document.getElementById('items-list');
   const clearAllBtn = document.getElementById('clear-all');
   let items = JSON.parse(localStorage.getItem('items')) || [];
   let editIndex = -1;
+
+  function showAlert(message, type = 'danger') {
+    // Quitar alertas previas
+    const oldAlert = document.querySelector('.alert');
+    if (oldAlert) oldAlert.remove();
+
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+    alertDiv.role = 'alert';
+    alertDiv.innerHTML = `
+      ${message}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    `;
+
+    form.prepend(alertDiv);
+
+    // Opcional: quitar la alerta después de 5 segundos
+    setTimeout(() => {
+      alertDiv.classList.remove('show');
+      alertDiv.classList.add('hide');
+      alertDiv.remove();
+    }, 5000);
+  }
 
   function renderItems() {
     itemsList.innerHTML = '';
@@ -32,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     });
 
-    // Delegación de eventos
+    // Delegación de eventos para editar
     itemsList.querySelectorAll('.edit-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         editIndex = +btn.dataset.index;
@@ -45,12 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
         form.querySelector('button[type="submit"]').textContent = 'Actualizar';
       });
     });
+
+    // Delegación de eventos para eliminar
     itemsList.querySelectorAll('.delete-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const idx = +btn.dataset.index;
         if (confirm('¿Seguro que quieres eliminar este elemento?')) {
           items.splice(idx, 1);
           saveAndRender();
+          showAlert('Elemento eliminado.', 'warning');
         }
       });
     });
@@ -66,6 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+
+    // Validación simple manual
+    if (
+      !form.name.value.trim() ||
+      !form.img.value.trim() ||
+      !form.description.value.trim() ||
+      !form.price.value ||
+      isNaN(parseFloat(form.price.value)) ||
+      parseFloat(form.price.value) < 0 ||
+      !form.type.value
+    ) {
+      showAlert('Por favor completa todos los campos correctamente.', 'danger');
+      return;
+    }
+console.log("Validación correcta");
     const newItem = {
       name: form.name.value.trim(),
       img: form.img.value.trim(),
@@ -73,11 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
       price: parseFloat(form.price.value),
       type: form.type.value
     };
+      // Mostrar el objeto JSON en consola
+      console.log(JSON.stringify(newItem, null, 2));
     if (editIndex >= 0) {
       items[editIndex] = newItem;
+      showAlert('Producto/Servicio actualizado con éxito.', 'success');
     } else {
       items.push(newItem);
+      showAlert('Producto/Servicio agregado con éxito.', 'success');
     }
+
     saveAndRender();
   });
 
@@ -85,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (confirm('¿Seguro que quieres borrar todos?')) {
       items = [];
       saveAndRender();
+      showAlert('Todos los elementos han sido borrados.', 'warning');
     }
   });
 
