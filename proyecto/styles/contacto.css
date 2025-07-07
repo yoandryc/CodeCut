@@ -1,15 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet');
   
 body {
-  background-color: #000000;
+  background-color: #0D121E;
   margin: 0;
 }
-.navbarLogoImg {
-  height: 120px; 
-  width: auto;
+
+/* CSS del Navbar*/
+.navbar {
+  background-color: #000000;
 }
 
+.navbarLogoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.navTextLogo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F0B35B !important;
+}
+
+/* Aplica color dorado al enlace activo */
+.nav-link.active {
+  color: #F0B35B !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/*Termina CSS de Navbar*/
   
 .hero {
     position: relative;
@@ -30,7 +62,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: #272727; 
     z-index: 1;
 }
 
@@ -38,27 +70,23 @@ body {
     position: relative;
     z-index: 2;
     font-family:'Bebas Neue', Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.formulario{
     color: white;
+     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
 }
 
-.hero h1 {
-font-size: 3rem;
-font-weight: bold;
-}
-
-.hero p {
-font-size: 1.2rem;
-margin-top: 10px;
+.btn-primary {
+  background-color: #F0B35B;
+  border: none;
+  font-family: 1.5rem;
 }
 
 @media (max-width: 1400px) {
-.hero h1 {
-font-size: 2rem;
-}
-
-.hero p {
-font-size: 1rem;
-}
 
 .hero {
 height: 40vh;
@@ -71,14 +99,16 @@ padding: 20px;
 font-size: 2rem;
 }
 
-.hero p {
-font-size: 1rem;
-}
-
 .hero {
 height: 40vh;
 padding: 20px;
  }
+}
+
+.warnings{
+    text-align: center;
+    margin: auto;
+    color: pink;
 }
 
 /* INICIO DE CSS PARA EL FOOTER*/
@@ -98,4 +128,3 @@ color: #85aff7;
 .form-label{
     color:white
 }
-
