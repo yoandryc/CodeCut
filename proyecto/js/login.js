@@ -1,4 +1,4 @@
-// Agrega usuario de prueba solo si no existe
+// Agregando 
 if (!localStorage.getItem("users")) {
   const demoUser = {
     email: "prueba@correo.com",
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userFound = users.find(user => user.email === email && user.password === password);
 
     if (userFound) {
-      // Guardar sesión (opcional)
+      // Guardar sesión 
       localStorage.setItem("currentUser", JSON.stringify(userFound));
       // Redirigir al panel admin
       window.location.href = "admin.html";
