@@ -121,7 +121,7 @@ console.log("Validación correcta");
       items.push(newItem);
       showAlert('Producto/Servicio agregado con éxito.', 'success');
     }
-
+ 
     saveAndRender();
   });
 
