@@ -1,10 +1,31 @@
 //Tomamos valores del formulario 
 const productsController = document.querySelector('#productsForm');
+const fileInput = document.getElementById('formFile');
 //evento submit y funcion callback
 productsController.addEventListener('submit', (e) => {
   //Recibimos evento
   //PreventDefault, para evitar que se recarge la pagina
   e.preventDefault();
+
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    // Aquí puedes agregar la lógica para enviar el archivo al servidor,
+    // o procesarlo localmente.
+    console.log('Archivo seleccionado:', file.name);
+    // Ejemplo:  crear una vista previa de la imagen
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const imgPreview = document.createElement('img');
+      imgPreview.src = e.target.result;
+      imgPreview.classList.add('img-fluid', 'col-md-4'); // Bootstrap para responsive y margen superior
+      fileInput.parentNode.appendChild(imgPreview);
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
+
   //Tomamos los campos del formulario
   const id = document.querySelector('#id').value;
   const nameProduct = document.querySelector('#nameProduct').value;
@@ -42,6 +63,7 @@ function createCard(item){
 }
 //Por cada elemento creamos una card
 //Falta validación
+container.innerHTML = '';
 Products.forEach(item => {
   const card = createCard(item);
   container.appendChild(card);
