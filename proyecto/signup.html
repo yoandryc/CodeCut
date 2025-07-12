@@ -70,35 +70,34 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card p-4 shadow signup-card">
             <h2 class="text-center mb-4 textRegistro">Registrarse</h2>
-            <!-- img src="imgs/iconUserLogin.png" alt="Icon User Login" -->
             <!-- Formulario -->
             <form id="signupForm">
                 <div class="mb-3">
-                    <label for="lastName" class="form-label">Apellido</label>
+                    <label for="lastName" class="form-label">Apellido(s)</label>
                     <input type="text" class="form-control" id="lastName" placeholder="Apellido(s)">
                 </div> 
                 <div class="mb-3">
-                    <label for="Name" class="form-label">Nombre</label>
+                    <label for="Name" class="form-label">Nombre(s)</label>
                     <input type="text" class="form-control" id="name" placeholder="Nombre(s)">
                 </div>  
                 <div class="mb-3">
                     <label for="Phone Number" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="333333333">
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Teléfono (10 dígitos)">
+                    <div id="alertContainerPhone" class="mt-3"></div>
                 </div>                                                
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                    <div id="alertContainerEmail" class="mt-3"></div>
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="password" placeholder="password">
+                    <div id="alertContainerPassword" class="mt-3"></div>
                 </div>
-            <div class="mb-3">
-                <div class="signup-text">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                    <label class="form-check-label" for="dropdownCheck">Acepto términos y condiciones</label>
-                </div>
-            </div>
+            
+                    <div id="alertContainer" class="mt-3"></div>
+            
                 <button type="submit" class="btn btn-primary ">Registrarse</button>
                 <div class="signup-text">
                     <p>¿Ya tienes una cuenta? <a href="login.html">Login</a></p>
