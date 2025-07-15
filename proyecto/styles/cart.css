@@ -1,11 +1,20 @@
+body, p, a, span, button, input, label, .btn, .form-control {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 body {
   margin: 0;
   background-color: #0D121E;
-  font-family: sans-serif;
-  color: #FFFFFF;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* CSS del Navbar*/
 .navbar {
   background-color: #000000;
 }
@@ -19,13 +28,11 @@ body {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 0;
   padding-left: 1rem;
 }
 
 .nav-link {
   color: #ffffff !important;
-  font-family: 'Poppins', sans-serif;
   margin-left: 1rem;
   transition: color 0.3s;
 }
@@ -34,61 +41,117 @@ body {
   color: #F0B35B !important;
 }
 
-/* Aplica color dorado al enlace activo */
 .nav-link.active {
   color: #F0B35B !important;
   font-weight: bold;
   text-decoration: underline;
 }
-/*Termina CSS de Navbar*/
 
-footer{
-    position: relative;
-    left: 0;
-    bottom: 0;  
-    display: table;
-    width: 100%;
-    height: 13vh;
-    background-color: #000;
-    color:#fff;
-    text-align: center;
+.titulo-carrito {
+  color: #BEA654;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-
-
-h1, h2 {
-  color: #004aad;
+.producto-carrito {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
-#productos, #carrito {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.precio-producto {
+  color: #004AAD;
 }
 
-.card, .carrito-item {
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 200px;
+.resumen-compra {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  color: #000;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #004aad;
-  color: white;
+.btn-finalizar {
+  background-color: #004AAD;
+  color: #fff;
+  font-weight: 800;
   border: none;
-  padding: 5px 10px;
-  margin-top: 5px;
-  cursor: pointer;
-  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn-finalizar:hover {
   background-color: #00327a;
 }
+
+.cantidad-control {
+  max-width: 120px;
+}
+
+.cantidad-input {
+  width: 50px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border: none;
+}
+
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 60px;
+  height: 70px;
+}
+
+.social-icon i {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon i:hover {
+  color: #F0B35B;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1DA851;
+}
+
+@media (max-width: 768px) {
+  .producto-carrito .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .producto-carrito img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .resumen-compra {
+    margin-top: 2rem;
+  }
+}
+
+
