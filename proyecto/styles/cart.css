@@ -53,51 +53,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.producto-carrito {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  color: #000;
-}
-
-.precio-producto {
-  color: #004AAD;
-}
-
-.resumen-compra {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  color: #000;
-}
-
-.btn-finalizar {
-  background-color: #004AAD;
-  color: #fff;
-  font-weight: 800;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-finalizar:hover {
-  background-color: #00327a;
-}
-
-.cantidad-control {
-  max-width: 120px;
-}
-
-.cantidad-input {
-  width: 50px;
-  text-align: center;
-  background-color: #f1f1f1;
-  border: none;
-}
-
 footer {
   width: 100%;
   padding: 2rem 0;
@@ -120,23 +75,6 @@ footer {
   color: #F0B35B;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 12px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-  text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  background-color: #1DA851;
-}
 
 @media (max-width: 768px) {
   .producto-carrito .row {
