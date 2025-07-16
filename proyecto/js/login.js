@@ -1,12 +1,3 @@
-// Agregando 
-if (!localStorage.getItem("users")) {
-  const demoUser = {
-    email: "prueba@correo.com",
-    password: "123456"
-  };
-  localStorage.setItem("users", JSON.stringify([demoUser]));
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const emailInput = document.getElementById("email");
@@ -27,16 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Obtener usuarios del localStorage
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Buscar usuario que coincida
+    // Buscar usuario
     const userFound = users.find(user => user.email === email && user.password === password);
 
     if (userFound) {
-      // Guardar sesión 
+      // Guardar sesión
       localStorage.setItem("currentUser", JSON.stringify(userFound));
-      // Redirigir al panel admin
-      window.location.href = "admin.html";
+
+      // Redirigir a admin.html si es el usuario especial
+      if (email === "prueba@correo.com" && password === "123456") {
+        window.location.href = "admin.html";
+      } else {
+        // Redirigir a usuario.html para otros usuarios
+        window.location.href = "Pusuario.html";
+      }
     } else {
       alert("Usuario o contraseña incorrectos.");
     }
   });
-});
+}); 

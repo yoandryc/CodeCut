@@ -48,3 +48,8 @@ h1 {
 #contenedor > div {
   width: 50%;
 }
+
+#avatar{
+  width: 30px;
+  height: 30px;
+}
