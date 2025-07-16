@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mogra&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+  
+
+
+body {
+  background-color: #0D121E;
+    margin: 0;
+}
+
+
+/* CSS del Navbar*/
+.navbar {
+  background-color: #000000;
+}
+
+.navbarLogoImg {
+  width: 60px;
+  height: 60px;
+}
+
+.navTextLogo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #F0B35B !important;
+}
+
+/* Aplica color dorado al enlace activo */
+.nav-link.active {
+  color: #F0B35B !important;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* FIN del Navbar*/
+
+/*TIPOGRAFIA TITULO*/
+h1 {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 3.81rem;
+  font-weight: 400;
+  color: #FFFFFF;
+   line-height: 3.6rem;
+   letter-spacing: 3.3px;
+   
+}
+
+/*TIPOGRAFIA SUBTITULO*/
+h2 {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 2.5rem;
+  font-weight: 36px;
+  color: #E1B12C;
+}
+
+
+/*TIPOGRAFIA PARRAFOS*/
+p {
+font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 500;
+ line-height: 1.2rem;
+ color: #E0E0E0;
+ 
+}
+
+.p-acciones {
+font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 800;
+ line-height: 1.2rem;
+  color: #E0E0E0;
+
+}
+
+.p-resaltar {
+font-family: 'Open Sans', sans-serif;
+font-style: italic;
+ font-size: 1.25rem;
+ font-weight: 600;
+ line-height: 1.2rem;
+  color: #E0E0E0;
+}
+
+
+/*texto parrafo card*/
+.p-card {
+    font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 500;
+ line-height: 1.2rem;
+ color: #000000;
+}
+
+.subtitulo-card {
+font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 800;
+ line-height: 1.2rem;
+  color: #000000;
+
+}
+
+
+
+/* INICIO DE CSS PARA EL FOOTER*/
+.fondo-copy {
+background-color: rgb(0, 0, 0);
+height: 100%;
+} 
+
+.ICONOS {
+color: white;
+}
+
+.ICONOS:hover {
+color: #85aff7; 
+} 
+
+.form-label{
+    color:white
+}
+/* FIN DE CSS PARA EL FOOTER*/
