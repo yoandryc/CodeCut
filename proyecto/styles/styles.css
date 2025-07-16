@@ -77,7 +77,7 @@ header h1,
   font-size: 2.5rem; /* ajusta el tamaño */
   text-transform: uppercase; /* si quieres todo en mayúsculas */
   letter-spacing: 1px; /* separa letras como en el diseño */
-  color: #FFFFFF; /* blanco sólido */
+  color: #ffffff;; /* blanco sólido */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 768px) {
@@ -200,7 +200,7 @@ header h1,
     width: 90%;
   }
 }
-/* ?footer */
+/* ?footer 
 .footer {
   background-color: #0B0F1A;
   position: relative;
@@ -215,12 +215,12 @@ header h1,
 .social-icon {
   color: white;
   font-size: 1.5rem;
-  margin: 0 10px;
+  margin: 0 5px;
   transition: color 0.3s ease;
-}
+}*/
 
 .social-icon:hover {
-  color: #F0B35B;
+  color: #FF4D6D;
 }
 
 /* Botón flotante de WhatsApp */
