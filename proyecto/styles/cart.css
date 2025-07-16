@@ -10,9 +10,9 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   margin: 0;
-  background-color: #0D121E;
+  background-color: #0D121E; 
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 .navbar {
@@ -50,9 +50,10 @@ body {
 .titulo-carrito {
   color: #BEA654;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
+/* Footer */
 footer {
   width: 100%;
   padding: 2rem 0;
@@ -75,21 +76,85 @@ footer {
   color: #F0B35B;
 }
 
-
-@media (max-width: 768px) {
-  .producto-carrito .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .producto-carrito img {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-
-  .resumen-compra {
-    margin-top: 2rem;
-  }
+#carrito-container {
+  display: block;
 }
 
+.resumen-compra {
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  position: sticky;
+  top: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
+  text-align: center;
+}
 
+.resumen-compra div {
+  margin-bottom: 0.8rem;
+}
+
+.producto-en-carrito {
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.producto-en-carrito img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.producto-en-carrito .info {
+  flex-grow: 1; 
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-cantidad {
+  background-color: #f0b35b;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-cantidad:hover {
+  background-color: #ffcb7b;
+}
+
+.btn-eliminar {
+  background-color: transparent;
+  border: none;
+  color: #dc3545;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-eliminar:hover {
+  color: #b30000;
+}
+
+.precio-y-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
