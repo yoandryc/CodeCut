@@ -1,55 +1,5 @@
-/*// Al cargar la página
+//evento DOM  que agrupa la inicialización
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtener el nombre de usuario guardado (ej. en localStorage)
-    const savedUsername = localStorage.getItem('registered-username');
-    
-    if (savedUsername) {
-        document.getElementById('username-display').textContent = 
-            `Bienvenido, ${savedUsername}!`;
-    } else {
-        document.getElementById('username-display').textContent = 
-            'Bienvenido, Invitado';
-    }
-});
-
-// Función para manejar la carga de la imagen
-    document.getElementById('avatar-upload').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                document.getElementById('avatar').src = event.target.result;
-                // Aquí puedes guardar la imagen en localStorage si lo deseas
-                localStorage.setItem('user-avatar', event.target.result);
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // Cargar imagen guardada (si existe) al cargar la página
-    window.addEventListener('DOMContentLoaded', function() {
-        const savedAvatar = localStorage.getItem('user-avatar');
-        if (savedAvatar) {
-            document.getElementById('avatar').src = savedAvatar;
-        }
-        
-        const savedDescription = localStorage.getItem('user-description');
-        if (savedDescription) {
-            document.getElementById('user-description').value = savedDescription;
-        }
-    });
-
-    // Guardar la descripción
-    document.getElementById('save-description').addEventListener('click', function() {
-        const description = document.getElementById('user-description').value;
-        localStorage.setItem('user-description', description);
-        alert('Descripción guardada!');
-    });
-
-    */
-
-
-    document.addEventListener('DOMContentLoaded', function() {
   // Obtener usuario actual
   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
   const avatarImg = document.getElementById('avatar');
@@ -117,6 +67,62 @@ document.addEventListener('DOMContentLoaded', function() {
     alert('Descripción guardada!');
 });
     });
+
+//Descripción
+// Obtener elementos del DOM
+    const textarea = document.getElementById('user-description');
+    const saveButton = document.getElementById('save-description');
+
+    // 1. Cargar descripción guardada al iniciar
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedDescription = localStorage.getItem('user-description');
+        if (savedDescription) {
+            textarea.value = savedDescription;
+        }
+    });
+
+    // 2. Mostrar botón solo cuando hay texto
+    textarea.addEventListener('input', function() {
+        saveButton.style.display = this.value.trim() !== '' ? 'block' : 'none';
+    });
+
+    // 3. Guardar en localStorage al hacer clic
+    saveButton.addEventListener('click', function() {
+        const description = textarea.value.trim();
+        
+        // Guardar en localStorage
+        localStorage.setItem('user-description', description);
+        
+        // Ocultar el botón después de guardar
+        this.style.display = 'none';
+        
+        // Mostrar confirmación (opcional)
+        alert('Descripción modificada y guardada correctamente');
+        
+    });
+//editar lista
+document.addEventListener('DOMContentLoaded', function() {
+  // Mostrar modal al hacer clic en "Editar lista"
+  document.getElementById('edit-products-btn').addEventListener('click', function() {
+    var modal = new bootstrap.Modal(document.getElementById('edit-products-modal'));
+    modal.show();
+  });
+
+  // Guardar cambios
+  document.getElementById('save-products-btn').addEventListener('click', function() {
+    // Aquí tu lógica para guardar los cambios
+    console.log("Guardando cambios...");
+    
+    // Ocultar el modal después de guardar
+    var modal = bootstrap.Modal.getInstance(document.getElementById('edit-products-modal'));
+    modal.hide();
+  });
+
+  // Cancelar también cierra el modal (ya está manejado por data-bs-dismiss)
+});
+
+
+
 
 
 // Abrir modal
