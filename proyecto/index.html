@@ -11,9 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <!-- CSS -->
+       <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+  
+
     <!-- Iconos para el navbar-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -87,9 +91,9 @@
 
     <!-- Columna de texto -->
     <div class="col-lg-6 text-white">
-      <h2 class="fw-bold mb-4">PRODUCTOS</h2>
-      <p>Lorem ipsum dolor sit amet consectetur. Sed vitae egestas risus in eleifend porttitor nam.</p>
-      <p>Lorem ipsum dolor sit amet consectetur. Sed vitae egestas risus in eleifend porttitor nam.</p>
+      <h2 class="text-center mb-4">PRODUCTOS</h2>
+      <p>En nuestra barbería encontrarás productos de alta calidad seleccionados especialmente para el cuidado masculino.</p>
+      <p>Desde ceras con fijación profesional hasta aceites para barba que hidratan y suavizan, cada producto está pensado para elevar tu estilo al siguiente nivel.</p>
       <p><strong>Horario:</strong> 10:00 a 21:00</p>
     </div>
   </div>
@@ -98,16 +102,16 @@
 <!--? Servicios  -->
   <div class="container py-5">
     <h2 class="text-center mb-4">Servicios</h2>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, minima? Ratione molestias debitis quaerat? Nesciunt adipisci modi nam laborum dolor id ab maxime nemo. Dignissimos quae facilis voluptatem placeat incidunt!.</p>
+    <p class="card-text">Ofrecemos cortes clásicos y modernos, afeitados con navaja, arreglos de barba y tratamientos capilares. Nuestro equipo de barberos está listo para brindarte una experiencia personalizada con atención al detalle y estilo profesional.</p>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
       <!-- Card 1 -->
       <div class="col">
-        <div class="card flash-card h-100">
+        <div class=" card flash-card h-100">
           <img src="imgs/h-4.png" class="card-img-top" alt="Variable">
           <div class="card-body text-center">
-            <h5 class="card-title">Secado de cabello</h5>
-            <p class="card-text">El servicio de secado de cabello se realiza con secadora profesional para dar forma, volumen y un acabado pulido al corte. </p>
+            <h5 class="subtitulo-card card-title">Secado de cabello</h5>
+            <p class="p-card card-text">El servicio de secado de cabello se realiza con secadora profesional para dar forma, volumen y un acabado pulido al corte. </p>
           </div>
         </div>
       </div>
@@ -117,8 +121,8 @@
         <div class="card flash-card h-100">
           <img src="imgs/h-5.png" class="card-img-top" alt="Estructura de control">
           <div class="card-body text-center">
-            <h5 class="card-title">Corte a máquina</h5>
-            <p class="card-text">El corte a máquina es un estilo práctico, uniforme y moderno realizado exclusivamente con máquina eléctrica</p>
+            <h5 class="subtitulo-card card-title">Corte a máquina</h5>
+            <p class="p-card  card-text">El corte a máquina es un estilo práctico, uniforme y moderno realizado exclusivamente con máquina eléctrica</p>
           </div>
         </div>
       </div>
@@ -128,8 +132,8 @@
         <div class="card flash-card h-100">
           <img src="imgs/h-6.png" class="card-img-top" alt="Bucle for">
           <div class="card-body text-center">
-            <h5 class="card-title">Corte con tijera</h5>
-            <p class="card-text">El corte con tijera es una técnica precisa y personalizada que permite adaptar el estilo al tipo de rostro y cabello del cliente. </p>
+            <h5 class="subtitulo-card card-title">Corte con tijera</h5>
+            <p class="p-card card-text">El corte con tijera es una técnica precisa y personalizada que permite adaptar el estilo al tipo de rostro y cabello del cliente. </p>
           </div>
         </div>
       </div>
@@ -211,42 +215,26 @@
 </div>
 </section>
 <!--*Footer-->
-<footer class="footer bg-black text-white py-4 mt-5">
-  <div class="container text-center">
-    <div class="row justify-content-center mb-3">
-      <div class="col-auto">
-        <a href="https://instagram.com" target="_blank" class="social-icon">
-          <i class="fab fa-instagram fa-2x ICONOS"></i>
-        </a>
-      </div>
-      <div class="col-auto">
-        <a href="https://facebook.com" target="_blank" class="social-icon">
-          <i class="fab fa-facebook fa-2x ICONOS"></i>
-        </a>
-      </div>
-      <div class="iconos d-flex justify-content-center gap-8 my-8 VISITANOS">
-          <h2>VISÍTANOS</h2>
-      </div>
-    </div>
+<!--*Inicio Footer-->
+<footer class="footer text-center">
+    <div class="container">
 
-    <div class="mb-3">
-      <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="60" height="70" class="footer-logo">
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a href="https://maps.google.com" target="_blank" class="social-icon">
-          <i class="bi bi-geo-alt-fill"></i>
-        </a>
+         <!-- Redes sociales -->
+      <div class="mb-3">
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fi fi-brands-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fi fi-brands-facebook"></i></a>
+        <a href="https://maps.google.com" target="_blank" class="social-icon"><i class="fi fi-rr-marker"></i></a>
       </div>
-      </div >
-            <p class="copyright d-flex justify-content-center ">
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col-12">
+          <p class="copyright mb-0">
             &copy; 2025 Code&Cuts Barbería. Todos los derechos reservados.
-            </p>
+          </p>
         </div>
+      </div>
     </div>
-  </div>
-
   <!-- WhatsApp floating -->
   <a href="https://wa.me/5210000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
