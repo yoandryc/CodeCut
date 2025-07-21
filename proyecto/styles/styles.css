@@ -74,7 +74,7 @@ header h1,
 .hero h1 {
   font-family: 'Bebas Neue', Arial, sans-serif;
   font-weight: 400; /* máximo grosor */
-  font-size: 2.5rem; /* ajusta el tamaño */
+  font-size:3.81rem; /* ajusta el tamaño */
   text-transform: uppercase; /* si quieres todo en mayúsculas */
   letter-spacing: 1px; /* separa letras como en el diseño */
   color: #ffffff;; /* blanco sólido */
