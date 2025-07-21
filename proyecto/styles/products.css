@@ -16,12 +16,12 @@ body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-header h1,
+h1,
 .subtitulo,
 .section-title {
   font-family: 'Bebas Neue', Arial, sans-serif;
     font-weight: 400; /* Para regular */
-  color: #BEA654;
+  color: #E1B12C;
   letter-spacing: 1px;
 }
 
