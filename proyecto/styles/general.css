@@ -129,15 +129,12 @@ font-style: italic;
   color: #E0E0E0;
 }
 
-<<<<<<< HEAD
 /* INICIO DE CSS PARA EL FOOTER*/
 
 .fondo-copy {
 background-color: rgb(0, 0, 0);
 height: 100%;
 } 
-=======
->>>>>>> 27c289174f9ce163dc09d380f3dde38c61036039
 
 
 .p-boton {
@@ -147,11 +144,10 @@ font-family: 'Open Sans', sans-serif;
  line-height: 1.2rem;
   color: #000000;
 
-<<<<<<< HEAD
 .form-label{
     color:white
 } 
-=======
+
 }
 
 
@@ -193,5 +189,4 @@ font-family: 'Open Sans', sans-serif;
       color: #aaa;
       margin-top: 30px;
     }
->>>>>>> 27c289174f9ce163dc09d380f3dde38c61036039
 /* FIN DE CSS PARA EL FOOTER*/
