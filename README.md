@@ -106,7 +106,7 @@ Thanks to these amazing people for helping make this project better! 🚀
   <tr>
     <td align="center">
       <a href="https://github.com/yoandryc">
-        <img src="https://avatars.githubusercontent.com/u/88451029?v=4" width="100px;" alt="yoandryc"/>
+        <img src="https://avatars.githubusercontent.com/yoandryc" width="100px;" alt="yoandryc"/>
         <br />
         <sub><b>yoandryc</b></sub>
       </a>
@@ -117,5 +117,4 @@ Thanks to these amazing people for helping make this project better! 🚀
   </tr>
 </table>
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
 > “Confidence begins with a clean cut.” — *Code & Cut Barbershop*
