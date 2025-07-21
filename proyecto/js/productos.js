@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-body d-flex flex-column">
               <h5 class="subtitulo-card card-title">${item.name}</h5>
               <p class="p-card card-text flex-grow-1">${item.description}</p>
-              <p class="p-card"><strong>$${parseFloat(item.price).toFixed(2)}</strong> <span class="badge bg-info">${item.type}</span></p>
-              <button class="btn btn-primary mt-auto agregar-carrito"
+              <p class="p-card"><strong>$${parseFloat(item.price).toFixed(2)}</strong> </p>
+              <button class="btn btn-primary mt-auto agregar-carrito text-black"
                       data-name="${item.name}"
                       data-price="${item.price}"
                       data-img="${item.img}"
