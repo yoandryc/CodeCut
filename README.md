@@ -92,8 +92,94 @@ Stay tuned for updates, features, and deployment news.
 
 ## 🤝 Contributing
 
+
 We welcome contributions! If you’d like to improve or expand the platform, feel free to fork the repo, open an issue, or submit a pull request.
 
 ---
+## 👥 Contributors
 
+Thanks to these amazing people for helping make this project better! 🚀
+
+<!-- If you are using the All Contributors bot, don't remove the tags below -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/yoandryc">
+        <img src="https://avatars.githubusercontent.com/yoandryc" width="100px;" alt="yoandryc"/>
+        <br />
+        <sub><b>yoandryc</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+    <td align="center">
+      <a href="https://github.com/yoandryc">
+        <img src="https://avatars.githubusercontent.com/MakaiGaia" width="100px;" alt="MakaiGaia"/>
+        <br />
+        <sub><b>MakaiGaia</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+    <td align="center">
+      <a href="https://github.com/Jarelen">
+        <img src="https://avatars.githubusercontent.com/Jarelen" width="100px;" alt="Jarelen"/>
+        <br />
+        <sub><b>Jarelen</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+       <td align="center">
+      <a href="https://github.com/Orlando-Chavez">
+        <img src="https://avatars.githubusercontent.com/Orlando-Chavez" width="100px;" alt="Orlando-Chavez"/>
+        <br />
+        <sub><b>Orlando-Chavez</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+     </td>
+       <td align="center">
+      <a href="https://github.com/angel-molinero">
+        <img src="https://avatars.githubusercontent.com/angel-molinero" width="100px;" alt="angel-molinero"/>
+        <br />
+        <sub><b>angel-molinero</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+ </td>
+       <td align="center">
+      <a href="https://github.com/Fer-rivas-dev">
+        <img src="https://avatars.githubusercontent.com/Fer-rivas-dev" width="100px;" alt="Fer-rivas-dev"/>
+        <br />
+        <sub><b>Fer-rivas-dev</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+ <td align="center">
+      <a href="https://github.com/FranciscoGtz1996">
+        <img src="https://avatars.githubusercontent.com/FranciscoGtz1996" width="100px;" alt="FranciscoGtz"/>
+        <br />
+        <sub><b>FranciscoGtz1996</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+  <td align="center">
+      <a href="https://github.com/saraiceleste">
+        <img src="https://avatars.githubusercontent.com/saraiceleste" width="100px;" alt="saraiceleste"/>
+        <br />
+        <sub><b>saraiceleste</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+    <!-- Add more contributors here -->
+  </tr>
+</table>
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 > “Confidence begins with a clean cut.” — *Code & Cut Barbershop*
