@@ -148,7 +148,7 @@ header h1,
 }
  /*!Carusel */
 .carousel-item {
-  height: 80vh;
+  height: 60vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -167,7 +167,7 @@ header h1,
 .content-slide {
   position: relative;
   z-index: 2;
-  padding: 100px 80px;
+  padding: 100px 0px;
 }
 
 .text-section h1 {
@@ -176,7 +176,11 @@ header h1,
 }
 
 .text-section p {
-  font-size: 1.2rem;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 500;
+ line-height: 1.2rem;
+ color: #E0E0E0;
 }
 
 .main-img {
