@@ -1,7 +1,10 @@
-
+/*Importacion tipografia*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mogra&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-  
+ /*Importacion  iconos*/
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');  /* Para fi-rr */
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css');                /* Para fi-brands */
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
 
 body {
@@ -56,7 +59,7 @@ h1 {
   color: #FFFFFF;
    line-height: 3.6rem;
    letter-spacing: 3.3px;
-   
+    
 }
 
 /*TIPOGRAFIA SUBTITULO*/
@@ -116,23 +119,79 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
+/*TIPOGRAFIA FORMULARIO*/
+.p-resaltar-formulario {
+font-family: 'Open Sans', sans-serif;
+font-style: italic;
+ font-size: 1.25rem;
+ font-weight: 600;
+ line-height: 1.2rem;
+  color: #E0E0E0;
+}
 
+<<<<<<< HEAD
 /* INICIO DE CSS PARA EL FOOTER*/
 
 .fondo-copy {
 background-color: rgb(0, 0, 0);
 height: 100%;
 } 
+=======
+>>>>>>> 27c289174f9ce163dc09d380f3dde38c61036039
 
-.ICONOS {
-color: white;
-}
 
-.ICONOS:hover {
-color: #85aff7; 
-} 
+.p-boton {
+font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 800;
+ line-height: 1.2rem;
+  color: #000000;
 
+<<<<<<< HEAD
 .form-label{
     color:white
 } 
+=======
+}
+
+
+
+
+
+/* INICIO DE CSS PARA EL FOOTER*/
+
+    .footer {
+      background-color: #000;
+      padding: 40px 0 40px;
+      color: white;
+    }
+
+    .social-icon {
+      font-size: 20px;
+      background-color: #474747;
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 70%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background-color: #030303;
+      color: #a26106;
+    }
+
+   
+
+    .copyright {
+      font-size: 1rem;
+      color: #aaa;
+      margin-top: 30px;
+    }
+>>>>>>> 27c289174f9ce163dc09d380f3dde38c61036039
 /* FIN DE CSS PARA EL FOOTER*/
