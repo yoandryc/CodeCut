@@ -64,3 +64,20 @@ h1,
   font-weight: bold;
   text-decoration: underline;
 }
+.btn-primary{
+  background-color: #F0B35B !important;
+  border: none !important; 
+
+}
+
+.btn-primary:hover {
+  background-color: #be6f00 !important;
+  color: #FFFFFF;
+}
+
+.btn-primary:active {
+  background-color: #a65a00 !important;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
