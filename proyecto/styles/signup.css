@@ -79,6 +79,10 @@ body {
 
 .btn-primary {
   background-color: #F0B35B;
+  font-family: 'Open Sans', sans-serif;
+ font-size: 1.25rem;
+ font-weight: 800;
+ line-height: 1.2rem;
   border: none;
   margin-bottom: 2rem;
   padding: 8px 20px;
