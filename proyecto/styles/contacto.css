@@ -75,12 +75,20 @@ body {
 
 .hero-content {
    position: absolute;
+    font-size: 3.81rem;
    top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
    z-index: 2;
 }
+
+.titulo {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-weight: 400; 
+  font-size:3.81rem; 
+}
+
 
 
 .btn-primary {
