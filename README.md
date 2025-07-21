@@ -92,8 +92,30 @@ Stay tuned for updates, features, and deployment news.
 
 ## 🤝 Contributing
 
+
 We welcome contributions! If you’d like to improve or expand the platform, feel free to fork the repo, open an issue, or submit a pull request.
 
 ---
+## 👥 Contributors
+
+Thanks to these amazing people for helping make this project better! 🚀
+
+<!-- If you are using the All Contributors bot, don't remove the tags below -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/yoandryc">
+        <img src="https://avatars.githubusercontent.com/u/88451029?v=4" width="100px;" alt="yoandryc"/>
+        <br />
+        <sub><b>yoandryc</b></sub>
+      </a>
+      <br />
+      💻 📖 💡
+    </td>
+    <!-- Add more contributors here -->
+  </tr>
+</table>
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 > “Confidence begins with a clean cut.” — *Code & Cut Barbershop*
