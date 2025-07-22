@@ -136,3 +136,17 @@ console.log("Validación correcta");
   // Render inicial
   renderItems();
 });
+
+  // Guardar Eventos
+  document.getElementById('save-events').addEventListener('click', function() {
+    const content = document.getElementById('admin-events').value;
+    localStorage.setItem('admin-events', content);
+    alert('Eventos actualizados correctamente');
+  });
+
+  // Guardar Ofertas
+  document.getElementById('save-offers').addEventListener('click', function() {
+    const content = document.getElementById('admin-offers').value;
+    localStorage.setItem('admin-offers', content);
+    alert('Ofertas actualizadas correctamente');
+  });
