@@ -114,7 +114,7 @@
         <ul class="list-upload" id="top-products-list">
             <!-- Los productos se cargarán aquí -->
         </ul>
-        <button id="edit-products-btn" class="btn btn-primary">Editar lista</button>
+        <button id="edit-products-btn" class="upload-btn btn-primary">Editar lista</button>
 
 <!-- Modal para editar -->
 <div id="edit-products-modal" class="modal fade" tabindex="-1" aria-hidden="true">
@@ -214,6 +214,52 @@
 <!----------------------------------------------------------------------------------------------->
 <br>
 <br>
+<!-------------------------------------CITAS---------------------------------------------------------->
+<div class="news">
+<fieldset>
+  <legend> Agenda tu próxima cita </legend>
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Escoge tus servicios
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item active" href="#">Corte barba 1</a></li>
+          <li><a class="dropdown-item" href="#">Corte barba 2</a></li>
+          <li><a class="dropdown-item" href="#">Corte barba 3</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Corte barba 4</a></li>
+        </ul>
+      </div>
+      <br>
+  <label>Escoge el día de tu cita</label><br>
+  <input type="datetime-local" id="datetime-local-input" name="datetime-local-input">
+  <br><br>
+  <label>Escoge a uno de nuestros barberos para tu servicio</label>
+      <ul class="list-group">
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+        <label class="form-check-label" for="firstRadio">Barebero 1</label>
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+        <label class="form-check-label" for="secondRadio">Barbero 2</label>
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+        <label class="form-check-label" for="thirdRadio">Barbero 3</label>
+      </li>
+    </ul>
+    <br>
+  <label>Danos detalles de lo que quieres de tu corte</label>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+</fieldset>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<br>
+<br>
 
 <!---------------------------------DETALLES DEL MES------------------------------------------------------>>
 <div class="news">
@@ -304,7 +350,7 @@
 </div>
 </div>
         
- </div>
+ </div><br>
  <!--Fin de sección detalles-->
 
 <!--?Footer-->
