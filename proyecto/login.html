@@ -62,9 +62,10 @@
                     <a class="nav-link" href="signup.html">Sign up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.html">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+                  <a class="nav-link position-relative" id="cart-icon" href="cart.html">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-count" class="cart-count">0</span>
+                  </a>
                 </li>
             </ul>
         </div>
@@ -96,9 +97,7 @@
             </form>
         </div>
     </div>
-
-
-
+<!--*Footer-->
   <!--*Inicio Footer-->
 <footer class="footer text-center">
     <div class="container">
@@ -122,8 +121,8 @@
   </footer>
 
 <!--*Fin de footer-->
-
+<script src="js/login.js"></script>
+<script src="js/cartAnimation.js"></script>
     <script src="js/login.js"></script>
-
 </body>
 </html>
