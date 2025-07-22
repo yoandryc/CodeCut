@@ -217,18 +217,15 @@
 <!-------------------------------------CITAS---------------------------------------------------------->
 <div class="news">
 <fieldset>
-  <legend> Agenda tu próxima cita </legend>
-        <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Escoge tus servicios
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item active" href="#">Corte barba 1</a></li>
-          <li><a class="dropdown-item" href="#">Corte barba 2</a></li>
-          <li><a class="dropdown-item" href="#">Corte barba 3</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Corte barba 4</a></li>
-        </ul>
+  <legend> Agenda tu próxima cita </legend><br>
+      <div class="mb-3">
+        <label for="type" class="form-label">Seleciona tu servicio(s)</label>
+        <select id="type" class="form-select" required>
+          <option value="" disabled selected>Selecciona tus servicios</option>
+          <option value="Producto">Servicio 1</option>
+          <option value="Servicio">Servicio 2</option>
+        </select>
+        <div class="invalid-feedback">Selecciona al menos un servicio</div>
       </div>
       <br>
   <label>Escoge el día de tu cita</label><br>
@@ -255,6 +252,7 @@
         <label for="exampleFormControlTextarea1" class="form-label"></label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
+    <button type="button" class="btn btn-outline-secondary">Agendar ya!</button>
 </fieldset>
 </div>
 <!------------------------------------------------------------------------------------------------------------>

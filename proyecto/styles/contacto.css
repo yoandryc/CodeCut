@@ -83,10 +83,22 @@ body {
    z-index: 2;
 }
 
-.titulo {
-  font-family: 'Bebas Neue', Arial, sans-serif;
-  font-weight: 400; 
-  font-size:3.81rem; 
+.titulo-c {
+   font-family: 'Bebas Neue', sans-serif;
+ font-size: 3.81rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1400px) {
+  .titulo-c {
+   font-size: 3.81rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .titulo-c {
+    font-size: 3.81rem;
+  }
 }
 
 

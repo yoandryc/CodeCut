@@ -41,3 +41,8 @@ h1 {
   vertical-align: middle;
 }
 
+.date{
+  position: sticky;
+  top:20px;
+  font-family: "Open Sans", sans-serif;
+}
