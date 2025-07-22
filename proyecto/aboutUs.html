@@ -58,8 +58,9 @@
           <a class="nav-link" href="signup.html">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cart.html">
+          <a class="nav-link position-relative" id="cart-icon" href="cart.html">
             <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
           </a>
         </li>
       </ul>
@@ -274,7 +275,7 @@
 
   <!-- Animate.css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</body>
+
 <!--*Footer-->
 <footer class="footer bg-black text-white py-4 mt-5">
   <div class="container text-center">
@@ -318,5 +319,7 @@
   </a>
 </footer>
 <!--*Fin de footer-->
-
+<!-- JAVASCRIPT-->
+<script src="js/cartAnimation.js"></script>
+</body>
 </html>
