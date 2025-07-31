@@ -330,3 +330,68 @@ document.addEventListener('DOMContentLoaded', function() {
     tableBody.appendChild(row);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const agendarBtn = document.querySelector('.btn.btn-outline-secondary');
+  
+  agendarBtn.addEventListener('click', function() {
+    // Obtener los valores del formulario
+    const servicio = document.getElementById('type').value;
+    const fechaHora = document.getElementById('datetime-local-input').value;
+    const barbero = document.querySelector('input[name="listGroupRadio"]:checked').nextElementSibling.textContent;
+    const detalles = document.getElementById('exampleFormControlTextarea1').value;
+    
+    // Validar que todos los campos estén completos
+    if (!servicio || !fechaHora || !barbero) {
+      alert('Por favor completa todos los campos obligatorios');
+      return;
+    }
+    
+    // Crear objeto con los datos de la cita
+    const cita = {
+      servicio: servicio,
+      fechaHora: fechaHora,
+      barbero: barbero,
+      detalles: detalles
+    };
+    
+    // Guardar en localStorage 
+    guardarCita(cita);
+    
+    // Mostrar confirmación
+    alert('¡Cita agendada con éxito!\n\n' +
+          `Servicio: ${servicio}\n` +
+          `Fecha y hora: ${formatearFecha(fechaHora)}\n` +
+          `Barbero: ${barbero}\n` +
+          `Detalles: ${detalles || 'Ninguno'}`);
+    
+
+  });
+  
+  function guardarCita(cita) {
+    // Obtener citas existentes o crear array vacío si no hay
+    let citas = JSON.parse(localStorage.getItem('citas')) || [];
+    
+    // Agregar nueva cita
+    citas.push(cita);
+    
+    // Guardar en localStorage
+    localStorage.setItem('citas', JSON.stringify(citas));
+  }
+  
+  function formatearFecha(fechaHora) {
+    if (!fechaHora) return '';
+    
+    const opciones = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric', 
+      hour: '2-digit', 
+      minute: '2-digit',
+      hour12: true 
+    };
+    
+    return new Date(fechaHora).toLocaleDateString('es-ES', opciones);
+  }
+});
