@@ -58,8 +58,9 @@
           <a class="nav-link" href="signup.html">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cart.html">
+          <a class="nav-link position-relative" id="cart-icon" href="cart.html">
             <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
           </a>
         </li>
       </ul>
@@ -274,6 +275,28 @@
 
   <!-- Animate.css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!--*Footer-->
+<footer class="footer bg-black text-white py-4 mt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram fa-2x ICONOS"></i>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+          <i class="fab fa-facebook fa-2x ICONOS"></i>
+        </a>
+      </div>
+      <div class="iconos d-flex justify-content-center gap-8 my-8 VISITANOS">
+          <h2>VISÍTANOS</h2>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="60" height="70" class="footer-logo">
+    </div>
  <!--*Inicio Footer-->
 <footer class="footer text-center">
     <div class="container">
@@ -297,6 +320,7 @@
   </footer>
 
 <!--*Fin de footer-->
-
+<!-- JAVASCRIPT-->
+<script src="js/cartAnimation.js"></script>
 </body>
 </html>

@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let carrito = [];
   try {
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    // Validamos que cada item tenga quantity, price, nombre, descripción e imagen válidos
     carrito = carrito.map(item => ({
       ...item,
       quantity: typeof item.quantity === 'number' && item.quantity > 0 ? item.quantity : 1,
@@ -23,51 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
     carrito = [];
   }
 
-  // Guardar carrito actualizado en localStorage
   function guardarCarrito() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }
 
-  // Elimina un producto por índice del carrito
   function eliminarItem(index) {
     const i = parseInt(index, 10);
     if (isNaN(i)) return;
     carrito.splice(i, 1);
     guardarCarrito();
     renderizarCarrito();
+    actualizarContadorCarrito();
   }
 
-  // Cambia la cantidad (+ o -) de un producto
   function cambiarCantidad(index, incremento) {
     const i = parseInt(index, 10);
     if (isNaN(i)) return;
     const item = carrito[i];
     if (!item) return;
     const nuevaCantidad = item.quantity + incremento;
-    if (nuevaCantidad < 1) return; // No permitir cantidades menores a 1
+    if (nuevaCantidad < 1) return;
     item.quantity = nuevaCantidad;
     guardarCarrito();
     renderizarCarrito();
+    actualizarContadorCarrito();
   }
 
-  // Calcula subtotal y total del carrito
   function calcularTotales() {
     const subtotal = carrito.reduce((acc, item) => {
       const price = Number(item.price) || 0;
       const quantity = Number(item.quantity) || 1;
       return acc + price * quantity;
     }, 0);
-    const total = subtotal; // Aquí podrías agregar impuestos si quieres
+    const total = subtotal;
 
     subtotalSpan.textContent = subtotal.toFixed(2);
     totalSpan.textContent = total.toFixed(2);
   }
 
-  // Renderiza los productos en el carrito dinámicamente en el DOM
   function renderizarCarrito() {
     carritoContainer.innerHTML = '';
 
-    // Si no hay productos, muestra mensaje aun mensaje
     if (carrito.length === 0) {
       carritoContainer.innerHTML = `
         <div class="text-center text-muted py-5">
@@ -81,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Por cada producto, crea su tarjeta con imagen, nombre, descripción, controles y precio
     carrito.forEach((item, index) => {
       const card = document.createElement('article');
       card.className = 'producto-en-carrito';
@@ -110,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     calcularTotales();
 
-    // Asignar evento click para eliminar productos
     document.querySelectorAll('.btn-eliminar').forEach(btn => {
       btn.addEventListener('click', () => {
         const index = btn.getAttribute('data-index');
@@ -118,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Asignar evento click para cambiar cantidad (sumar/restar)
     document.querySelectorAll('.btn-cantidad').forEach(btn => {
       btn.addEventListener('click', () => {
         const index = btn.getAttribute('data-index');
@@ -129,18 +121,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Evento para botón comprar
   btnComprar.addEventListener('click', () => {
     if (carrito.length === 0) {
       alert('El carrito está vacío. Agrega productos antes de comprar.');
       return;
     }
 
-    // Al dar click, alerta y redirige a signup.html para login o registro
     alert('Para continuar con la compra debes iniciar sesión o registrarte.');
     window.location.href = 'signup.html';
   });
 
-  // Al cargar la página renderizamos el carrito
+  function actualizarContadorCarrito() {
+    const cartCount = document.getElementById('cart-count');
+    if (!cartCount) return;
+
+    const totalItems = carrito.reduce((acc, item) => acc + (item.quantity || 0), 0);
+
+    if (totalItems > 0) {
+      cartCount.textContent = totalItems;
+      cartCount.style.display = 'inline-block';
+    } else {
+      cartCount.style.display = 'none';
+    }
+  }
+
   renderizarCarrito();
+  actualizarContadorCarrito();
 });
