@@ -65,7 +65,7 @@ header h1,
   text-decoration: underline;
 }
 
-/* 🔥 NUEVO: Texto de tarjeta en dorado */
+/* Texto de tarjeta en dorado */
 .card-text {
   color: #F0B35B !important;
 }

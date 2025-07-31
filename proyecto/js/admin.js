@@ -137,6 +137,10 @@ console.log("Validación correcta");
   renderItems();
 });
 
+
+
+
+
   // Guardar Eventos
   document.getElementById('save-events').addEventListener('click', function() {
     const content = document.getElementById('admin-events').value;
@@ -150,3 +154,4 @@ console.log("Validación correcta");
     localStorage.setItem('admin-offers', content);
     alert('Ofertas actualizadas correctamente');
   });
+

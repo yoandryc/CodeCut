@@ -1,181 +1,569 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/proyecto/styles/Padmin.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>CodeCut.Administrador</title>
+<html lang="es">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Administrador - Productos y Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    /* Custom styles for the admin panel */
+    .bg-purple {
+      background-color: #6f42c1;
+    }
+    .bg-pink {
+      background-color: #d63384;
+    }
+    .btn-purple {
+      background-color: #6f42c1;
+      color: white;
+    }
+    .btn-pink {
+      background-color: #d63384;
+      color: white;
+    }
+    .highlight-card {
+      border-left: 4px solid #0d6efd;
+    }
+    .sales-card {
+      border-left: 4px solid #20c997;
+    }
+    .products-card {
+      border-left: 4px solid #6f42c1;
+    }
+    .services-card {
+      border-left: 4px solid #fd7e14;
+    }
+    .social-icon {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    .navTextLogo {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .header {
+      background-color: #f8f9fa;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+  </style>
 </head>
 <body>
-   <!-- Apartado del Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <!-- Imagen jpg del logo para el navbar-->
-            <img src="/proyecto/imgs/code&cuteLogo.jpg" alt="Logo" width="50" height="50" class="navbarLogoImg">
-            <span class="navTextLogo ms-2">Code & Cut</span>
-        </a>
-
-        <!-- Icono Hamburguesa importado del link de iconos-->
-        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">Acerca de</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="servicios.html">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Cerrar sesión</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cart.html">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
-                <li>
-                         <div data-bs-theme="dark">
-        <button type="button" class="btn-close" disabled aria-label="Close"></button>
+  <!------------------NAVBAR----------------------------->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="50" height="50" />
+      <span class="navTextLogo ms-2">Code & Cut</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link active" href="admin.html">Administrar</a></li>
+      </ul>
     </div>
+  </nav>
+  <!-------------------FIN DEL NAVBAR------------------>
+
+  <div class="container-fluid mt-5 pt-4">
+    <h1 class="text-center mb-4">Panel de Administración</h1>
+
+    <!------------------PANEL DE REPORTE MENSUAL---------------------------->
+    <div class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1><i class="fas fa-chart-line me-2"></i>Reporte Mensual</h1>
+            <p class="mb-0">Resumen de ventas y servicios - Ciclo actual</p>
+          </div>
+          <div class="col-md-6 text-end">
+            <span class="badge bg-light text-dark fs-6">
+              <i class="fas fa-calendar-alt me-1"></i> 
+              <span id="current-month"></span>
+            </span>
+          </div>
         </div>
-                </li>
-            </ul>
-    </nav> <br>
-    <!--Fin del apartado de navbar-->
-      <div class="profile">
-        <div>
-            <div class="row">
-                <div class="col-4">
-                <i class="fi fi-rr-user" > </i> <!--*Foto de perfil o avatar que elusuario escoja-->
-                </div>
-                <div class="col">
-                <h1>Administrador #####</h1>
-                </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Sección de Resumen Financiero -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card highlight-card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-money-bill-wave me-2"></i>Ganancias Totales del Mes</h5>
+              <h2 class="card-text">$4,850.00</h2>
+              <p class="text-muted">vs $3,920.00 el mes pasado</p>
+              <div class="d-flex align-items-center">
+                <span class="badge bg-success me-2">+23.7%</span>
+                <small class="text-muted">Crecimiento mensual</small>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
-      <div class="profile">
-        <h2>Así luce tu lista de servicios actual</h2>
-        <iframe src="servicios.html" width="700" height="400"></iframe>
-        <button>Agregar nuevo servicio</button> 
-        <button>Borrar servicio</button>
-      </div>
-      <div class="profile">
-        <h2>Así luce tu lista de productos actual</h2>
-        <iframe src="productos.html" width="700" height="400"></iframe>
-        <button>Agregar nuevo producto</button>
-        <button>Borrar servicio</button> 
+        <div class="col-md-4">
+          <div class="card sales-card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-shopping-cart me-2"></i>Ganancias por venta de productos</h5>
+              <h2 class="card-text">$2,150.00</h2>
+              <p class="text-muted">vs $1,780.00 el mes pasado</p>
+              <div class="d-flex align-items-center">
+                <span class="badge bg-success me-2">+20.8%</span>
+                <small class="text-muted">Crecimiento en ventas</small>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-calendar-day me-2"></i>Ganancias por servicios</h5>
+              <h2 class="card-text">$2,700.00</h2>
+              <p class="text-muted">vs $2,140.00 el mes pasado</p>
+              <div class="d-flex align-items-center">
+                <span class="badge bg-success me-2">+26.2%</span>
+                <small class="text-muted">Crecimiento diario</small>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="container" class="profile">
-      <div class="row">
-         <div >
-          10 Best sellers del mes
-        </div>
-          <div class="col">
-              <ul>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
+      <!-- Sección de Productos y Servicios -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card products-card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-boxes me-2"></i>Productos Más Vendidos</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Gel King Kong
+                  <span class="badge bg-primary rounded-pill">142 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Pomada Matte
+                  <span class="badge bg-primary rounded-pill">98 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Shampoo Anticaspa
+                  <span class="badge bg-primary rounded-pill">76 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Cera para Barba
+                  <span class="badge bg-primary rounded-pill">65 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Aceite para Barba
+                  <span class="badge bg-primary rounded-pill">54 ventas</span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-   
-
-
-
-      <div id="container" class="profile">
-        <div>
-          <h4>Eventos del mes</h4>
-          <textarea id="admin-events" rows="5" class="form-control mb-3">Actualmente no hay eventos</textarea>
-          <button id="save-events" class="btn btn-primary">Guardar Eventos</button>
+        <div class="col-md-6">
+          <div class="card services-card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-concierge-bell me-2"></i>Servicios Más Pedidos</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Corte Clásico
+                  <span class="badge bg-info rounded-pill">87 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Corte y Barba
+                  <span class="badge bg-info rounded-pill">65 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Corte Degradado
+                  <span class="badge bg-info rounded-pill">42 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Afeitado Clásico
+                  <span class="badge bg-info rounded-pill">38 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Tinte para Cabello
+                  <span class="badge bg-info rounded-pill">32 reservas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="mt-4">
-          <h4>Ofertas del mes</h4>
-          <textarea id="admin-offers" rows="5" class="form-control mb-3">Actualmente no hay ofertas</textarea>
-          <button id="save-offers" class="btn btn-primary">Guardar Ofertas</button>
+      </div>
+
+      <!-- Sección de Productos y Servicios Menos Vendidos -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Productos Menos Vendidos</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Peine de Madera
+                  <span class="badge bg-secondary rounded-pill">3 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Toalla Barbera
+                  <span class="badge bg-secondary rounded-pill">5 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Tijeras Profesionales
+                  <span class="badge bg-secondary rounded-pill">7 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Navaja Clásica
+                  <span class="badge bg-secondary rounded-pill">8 ventas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Kit de Viaje
+                  <span class="badge bg-secondary rounded-pill">9 ventas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div> 
-
-<script src="/proyecto/js/Padmin.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-<!--*Footer-->
-<footer class="footer bg-black text-white py-4 mt-5">
-  <div class="container text-center">
-    <div class="row justify-content-center mb-3">
-      <div class="col-auto">
-        <a href="https://instagram.com" target="_blank" class="social-icon">
-          <i class="fab fa-instagram fa-2x ICONOS"></i>
-        </a>
-      </div>
-      <div class="col-auto">
-        <a href="https://facebook.com" target="_blank" class="social-icon">
-          <i class="fab fa-facebook fa-2x ICONOS"></i>
-        </a>
-      </div>
-      <div class="iconos d-flex justify-content-center gap-8 my-8 VISITANOS">
-          <h2>VISÍTANOS</h2>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="60" height="70" class="footer-logo">
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a href="https://maps.google.com" target="_blank" class="social-icon">
-          <i class="bi bi-geo-alt-fill"></i>
-        </a>
-      </div>
-      </div >
-            <p class="copyright d-flex justify-content-center ">
-            &copy; 2025 Code&Cuts Barbería. Todos los derechos reservados.
-            </p>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-warning"><i class="fas fa-exclamation-circle me-2"></i>Servicios Menos Pedidos</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Tratamiento Capilar
+                  <span class="badge bg-secondary rounded-pill">2 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Depilación de Cejas
+                  <span class="badge bg-secondary rounded-pill">4 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Mascarilla Facial
+                  <span class="badge bg-secondary rounded-pill">5 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Corte Vintage
+                  <span class="badge bg-secondary rounded-pill">6 reservas</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Corte y Tinte
+                  <span class="badge bg-secondary rounded-pill">7 reservas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
+
+  <!---------------Actualizador de eventos y ofertas----------------------------->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Sección de Eventos -->
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header bg-purple text-white">
+            <div class="d-flex justify-content-between align-items-center">
+              <h4 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Eventos del Mes</h4>
+              <span class="badge bg-white text-purple" id="event-count">0 eventos</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="admin-events" style="height: 150px" placeholder="Ingrese los eventos del mes">Actualmente no hay eventos</textarea>
+              <label for="admin-events">Eventos importantes (uno por línea)</label>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">Máx. 500 caracteres</small>
+              <button id="save-events" class="btn btn-purple">
+                <i class="fas fa-save me-1"></i> Guardar Eventos
+              </button>
+            </div>
+          </div>
+          <div class="card-footer bg-light">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-info-circle text-purple me-2"></i>
+              <small class="text-muted">Ejemplo: 2*1 en corte escolar periodo vacacional</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Ofertas -->
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-header bg-pink text-white">
+            <div class="d-flex justify-content-between align-items-center">
+              <h4 class="mb-0"><i class="fas fa-tag me-2"></i>Ofertas del Mes</h4>
+              <span class="badge bg-white text-pink" id="offer-count">0 ofertas</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="admin-offers" style="height: 150px" placeholder="Ingrese las ofertas del mes">Actualmente no hay ofertas</textarea>
+              <label for="admin-offers">Ofertas especiales (una por línea)</label>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">Máx. 500 caracteres</small>
+              <button id="save-offers" class="btn btn-pink">
+                <i class="fas fa-save me-1"></i> Guardar Ofertas
+              </button>
+            </div>
+          </div>
+          <div class="card-footer bg-light">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-info-circle text-pink me-2"></i>
+              <small class="text-muted">Ejemplo: 20% en gel king kong</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container my-5">
+    <!-- Contenedor para alertas -->
+    <div id="alert-container"></div>
+
+    <!-- Botón para mostrar formulario -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Gestión de Productos y Servicios</h2>
+      <button id="toggle-form-btn" class="btn btn-primary">
+        <i class="fas fa-plus me-2"></i>Agregar nuevo producto o servicio
+      </button>
+    </div>
+
+    <!-- Formulario (oculto inicialmente) -->
+    <div id="item-form-container" class="card mb-5 d-none">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Nuevo Producto/Servicio</h5>
+      </div>
+      <div class="card-body">
+        <form id="item-form" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" id="name" class="form-control" required placeholder="Ej. Corte de cabello moderno" />
+              <div class="invalid-feedback">Por favor ingresa un nombre válido.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="type" class="form-label">Tipo</label>
+              <select id="type" class="form-select" required>
+                <option value="" disabled selected>Selecciona tipo</option>
+                <option value="Producto">Producto</option>
+                <option value="Servicio">Servicio</option>
+              </select>
+              <div class="invalid-feedback">Selecciona un tipo.</div>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="img" class="form-label">URL de la imagen</label>
+            <input type="url" id="img" class="form-control" required placeholder="https://ejemplo.com/imagen.jpg" />
+            <div class="invalid-feedback">Por favor ingresa una URL válida.</div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea id="description" class="form-control" rows="3" required placeholder="Descripción detallada"></textarea>
+            <div class="invalid-feedback">La descripción es obligatoria.</div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="price" class="form-label">Precio (MXN)</label>
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="number" id="price" class="form-control" required min="0" step="0.01" placeholder="250.00" />
+              </div>
+              <div class="invalid-feedback">Ingresa un precio válido.</div>
+            </div>
+            <div class="col-md-6 mb-3 d-flex align-items-end">
+              <div class="w-100">
+                <button type="submit" class="btn btn-success w-100">
+                  <i class="fas fa-save me-2"></i>Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex justify-content-end">
+            <button type="button" id="cancel-form" class="btn btn-outline-secondary me-2">
+              <i class="fas fa-times me-2"></i>Cancelar
+            </button>
+            <button type="button" id="clear-form" class="btn btn-outline-danger">
+              <i class="fas fa-eraser me-2"></i>Limpiar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Sección de Productos -->
+    <div class="card mb-5">
+      <div class="card-header bg-info text-white">
+        <h3 class="mb-0"><i class="fas fa-boxes me-2"></i> Productos</h3>
+      </div>
+      <div class="card-body">
+        <div id="products-list" class="row gy-4">
+          <!-- Los productos se cargarán aquí -->
+          <div class="col-12">
+            <div class="alert alert-info mb-0">No hay productos registrados aún</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer bg-light">
+        <small class="text-muted">Total de productos: <span id="products-count">0</span></small>
+      </div>
+    </div>
+
+    <!-- Sección de Servicios -->
+    <div class="card">
+      <div class="card-header bg-warning text-dark">
+        <h3 class="mb-0"><i class="fas fa-concierge-bell me-2"></i> Servicios</h3>
+      </div>
+      <div class="card-body">
+        <div id="services-list" class="row gy-4">
+          <!-- Los servicios se cargarán aquí -->
+          <div class="col-12">
+            <div class="alert alert-warning mb-0">No hay servicios registrados aún</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer bg-light">
+        <small class="text-muted">Total de servicios: <span id="services-count">0</span></small>
+      </div>
+    </div>
+  </main>
+
+  <!-- Template para items -->
+  <template id="item-template">
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100">
+        <img src="" class="card-img-top item-img" alt="Imagen del producto/servicio" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="card-title mb-2 item-name"></h5>
+            <span class="badge item-type-badge"></span>
+          </div>
+          <p class="card-text item-description small text-muted"></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <h6 class="mb-0 item-price text-success"></h6>
+            <div class="btn-group">
+              <button class="btn btn-sm btn-outline-primary edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+   
+  <!--*Inicio Footer-->
+  <footer class="footer text-center">
+    <div class="container">
+      <!-- Redes sociales -->
+      <div class="mb-3">
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://maps.google.com" target="_blank" class="social-icon"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col-12">
+          <p class="copyright mb-0">
+            &copy; 2025 Code&Cuts Barbería. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--*Fin de footer-->
   
-</footer>
-<!--*Fin de footer-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Script para mostrar el mes actual
+    document.addEventListener('DOMContentLoaded', function() {
+      const months = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+      ];
+      const currentDate = new Date();
+      const currentMonth = months[currentDate.getMonth()];
+      const currentYear = currentDate.getFullYear();
+      
+      document.getElementById('current-month').textContent = `${currentMonth} ${currentYear}`;
+      
+      // Contar líneas en los textareas de eventos y ofertas
+      function countLines(textareaId, countElementId) {
+        const textarea = document.getElementById(textareaId);
+        const countElement = document.getElementById(countElementId);
+        
+        textarea.addEventListener('input', function() {
+          const lines = this.value.split('\n').filter(line => line.trim() !== '');
+          countElement.textContent = `${lines.length} ${textareaId.includes('events') ? 'eventos' : 'ofertas'}`;
+        });
+        
+        // Inicializar conteo
+        const initialLines = textarea.value.split('\n').filter(line => line.trim() !== '');
+        countElement.textContent = `${initialLines.length} ${textareaId.includes('events') ? 'eventos' : 'ofertas'}`;
+      }
+      
+      countLines('admin-events', 'event-count');
+      countLines('admin-offers', 'offer-count');
+      
+      // Toggle del formulario
+      const toggleFormBtn = document.getElementById('toggle-form-btn');
+      const formContainer = document.getElementById('item-form-container');
+      
+      toggleFormBtn.addEventListener('click', function() {
+        formContainer.classList.toggle('d-none');
+        this.textContent = formContainer.classList.contains('d-none') ? 
+          '<i class="fas fa-plus me-2"></i>Agregar nuevo producto o servicio' : 
+          '<i class="fas fa-minus me-2"></i>Ocultar formulario';
+      });
+      
+      // Cancelar formulario
+      document.getElementById('cancel-form').addEventListener('click', function() {
+        formContainer.classList.add('d-none');
+        toggleFormBtn.textContent = '<i class="fas fa-plus me-2"></i>Agregar nuevo producto o servicio';
+      });
+    });
+  </script>
+</body>
 </html>
 
 

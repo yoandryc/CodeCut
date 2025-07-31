@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/general.css" />
 </head>
 <body>
+  <!------------------NAVBAR----------------------------->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black px-4">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="50" height="50" />
@@ -28,10 +29,13 @@
       </ul>
     </div>
   </nav>
+  <!-------------------FIN DEL NAVBAR------------------>
 
-  <main class="container my-5" style="padding-top:100px">
-    <h1 class="text-center mb-4">Panel de Administración</h1>
-<br>
+<h1 class="text-center mb-4">Panel de Administración</h1><br><br>
+
+
+  <main class="container my-5" style="padding-top:5px">
+  
     <!-- Contenedor para alertas -->
     <div id="alert-container"></div>
 
@@ -74,49 +78,76 @@
     <h2 class="mb-3">Productos y Servicios Actuales</h2>
     <div id="items-list" class="row gy-4"></div>
   </main>
-        <div id="container" class="profile">
-      <div class="row">
-         <div >
-          10 Best sellers del mes
-        </div>
-          <div class="col">
-              <ul>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-                <li><i class="fi fi-bs-terminal"></i> ... </li>
-              </ul>
-            </div>
+
+  
+
+<!---------------Actualizador de eventos y ofertas----------------------------->
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Sección de Eventos -->
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Eventos del Mes</h4>
+            <span class="badge bg-white text-purple" id="event-count">0 eventos</span>
           </div>
-        </div><br>
-   
-
-
-
-      <div id="container" class="profile">
-        <div>
-          <h4>Eventos del mes</h4>
-          <textarea id="admin-events" rows="5" class="form-control mb-3">Actualmente no hay eventos</textarea>
-          <button id="save-events" class="btn btn-primary">Guardar Eventos</button>
-        </div><br>
-        <div class="mt-4">
-          <h4>Ofertas del mes</h4>
-          <textarea id="admin-offers" rows="5" class="form-control mb-3">Actualmente no hay ofertas</textarea>
-          <button id="save-offers" class="btn btn-primary">Guardar Ofertas</button>
         </div>
-      </div> 
+        <div class="card-body">
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="admin-events" style="height: 150px" placeholder="Ingrese los eventos del mes">Actualmente no hay eventos</textarea>
+            <label>Eventos importantes (uno por línea)</label>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Máx. 500 caracteres</small>
+            <button id="save-events" class="btn btn-outline-success">
+              <i class="fas fa-save me-1"></i> Guardar Eventos
+            </button>
+          </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-info-circle text-purple me-2"></i>
+            <small class="text-muted">Ejemplo: 2*1 en corte escolar periodo vacacional</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Ofertas -->
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-header">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4 class="mb-0"><i class="fas fa-tag me-2"></i>Ofertas del Mes</h4>
+            <span class="badge bg-white text-pink" id="offer-count">0 ofertas</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="admin-offers" style="height: 150px" placeholder="Ingrese las ofertas del mes">Actualmente no hay ofertas</textarea>
+            <label>Ofertas especiales (una por línea)</label>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">Máx. 500 caracteres</small>
+            <button id="save-offers" class="btn btn-outline-success">
+              <i class="fas fa-save me-1"></i> Guardar Ofertas
+            </button>
+          </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-info-circle text-pink me-2"></i>
+            <small class="text-muted">Ejemplo: 20% en gel king kong</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
    <!--*Inicio Footer-->
