@@ -63,6 +63,11 @@ body {
   flex-grow: 1; 
 }
 
+.descripcion-carrito {
+  color: #000; 
+}
+
+
 .cantidad-control {
   display: flex;
   align-items: center;

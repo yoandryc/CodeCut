@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${item.img}" alt="${item.name}" />
         <div class="info">
           <h5>${item.name}</h5>
-          ${item.description ? `<p>${item.description}</p>` : ''}
+          ${item.description ? `<p class="descripcion-carrito">${item.description}</p>` : ''}
           <div class="cantidad-control">
             <button class="btn-cantidad" data-index="${index}" data-action="restar">-</button>
             <span>${item.quantity}</span>
