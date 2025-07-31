@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Servicios</title>
      <!-- CSS -->
-  <link rel="stylesheet" href="styles/products.css" />
+  <link rel="stylesheet" href="styles/servicios.css" />
   <link rel="stylesheet" href="styles/general.css">
    
    
@@ -28,15 +28,15 @@
           <fieldset>
             <form id="signupForm">
                 <div class="mb-3">
-                    <label for="lastName" class="p-resaltar">Apellido(s)</label>
+                    <label for="lastName" >Apellido(s)</label>
                     <input type="text" class="form-control" id="lastName" placeholder="Apellido(s)">
                 </div> 
                 <div class="mb-3">
-                    <label for="Name" class="p-resaltar">Nombre(s)</label>
+                    <label for="Name" >Nombre(s)</label>
                     <input type="text" class="form-control" id="name" placeholder="Nombre(s)">
                 </div>  
                 <div class="mb-3">
-                    <label for="Phone Number" class="p-resaltar">Teléfono</label>
+                    <label for="Phone Number" >Teléfono</label>
                     <input type="text" class="form-control" id="phoneNumber" placeholder="Teléfono (10 dígitos)">
                     <div id="alertContainerPhone" class="mt-3"></div>
                 </div>                                                
@@ -45,8 +45,11 @@
                 <label for="type" class="form-label">Seleciona tu servicio(s)</label>
                 <select id="type" class="form-select" required>
                   <option value="" disabled selected>Selecciona tus servicios</option>
-                  <option value="Producto">Servicio 1</option>
-                  <option value="Servicio">Servicio 2</option>
+                  <option value="Producto">Corte tradicional</option>
+                  <option value="Servicio">Tinte premium</option>
+                  <option value="Servicio">Peinado de Gala</option>
+                  <option value="Servicio">Barba clásica</option>
+                  <option value="Servicio">Manicure Express</option>
                 </select>
                 <div class="invalid-feedback">Selecciona al menos un servicio</div>
               </div>
@@ -58,15 +61,15 @@
                 <ul class="list-group">
                 <li class="list-group-item">
                   <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
-                  <label class="form-check-label" for="firstRadio">Barebero 1</label>
+                  <label class="form-check-label" for="firstRadio">Barbero 1. Juan</label>
                 </li>
                 <li class="list-group-item">
                   <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
-                  <label class="form-check-label" for="secondRadio">Barbero 2</label>
+                  <label class="form-check-label" for="secondRadio">Barbero 2. María</label>
                 </li>
                 <li class="list-group-item">
                   <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
-                  <label class="form-check-label" for="thirdRadio">Barbero 3</label>
+                  <label class="form-check-label" for="thirdRadio">Barbero 3. Ricardo</label>
                 </li>
               </ul>
               <br>
@@ -76,7 +79,7 @@
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                     <div>
-                    <p> O resgitra tu cita desde tu cuenta y obtén más beneficios en <a href="login.html"> agendar desde perfil</a></p>
+                    <p class="date"> O resgitra tu cita desde tu cuenta y obtén más beneficios en <a href="login.html"> agendar desde perfil</a></p>
                 </div>
           </fieldset>
       </div>

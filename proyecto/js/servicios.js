@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card-body d-flex flex-column">
               <h5 class="subtitulo-card card-title">${item.name}</h5>
               <p class="p-card card-text flex-grow-1">${item.description}</p>
-              <p class="p-card"><strong>$${parseFloat(item.price).toFixed(2)}</strong> <span class="badge bg-info">${item.type}</span></p>
+              <p class="p-card"><strong>$${parseFloat(item.price).toFixed(2)}</strong> <span class="badge bg-info" style="display:none">${item.type}</span></p>
              
             </div>
           </div>
