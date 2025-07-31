@@ -12,6 +12,19 @@ body {
     margin: 0;
 }
 
+/* CSS carrito de compraas*/
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  display: none;
+}
 
 /* CSS del Navbar*/
 .navbar {
@@ -143,15 +156,11 @@ font-family: 'Open Sans', sans-serif;
  font-weight: 800;
  line-height: 1.2rem;
   color: #000000;
+}
 
 .form-label{
     color:white
 } 
-
-}
-
-
-
 
 
 /* INICIO DE CSS PARA EL FOOTER*/
@@ -190,3 +199,5 @@ font-family: 'Open Sans', sans-serif;
       margin-top: 30px;
     }
 /* FIN DE CSS PARA EL FOOTER*/
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://cur.cursors-4u.net/others/oth-7/oth639.cur), auto !important;} /* End https://www.cursors-4u.com */

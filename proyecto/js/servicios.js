@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h5 class="card-title">${item.name}</h5>
               <p class="card-text flex-grow-1">${item.description}</p>
               <p><strong>$${parseFloat(item.price).toFixed(2)}</strong> <span class="badge bg-info">${item.type}</span></p>
-              <button class="btn btn-primary mt-auto agregar-carrito"
+              <button type="button" class="btn btn-primary mt-auto agregar-carrito"
                       data-name="${item.name}"
                       data-price="${item.price}"
                       data-img="${item.img}"
@@ -36,33 +36,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderItems();
 
-  // Agrega al carrito
-  document.addEventListener('click', e => {
-    if (e.target.classList.contains('agregar-carrito')) {
-      const boton = e.target;
+  window.addEventListener('storage', e => {
+  if (e.key === 'items') renderItems();
+  });
+
+  // Carrito de compras
+  const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+
+  botonesAgregar.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+
       const producto = {
-        name: boton.getAttribute('data-name'),
-        price: parseFloat(boton.getAttribute('data-price')),
-        img: boton.getAttribute('data-img'),
-        type: boton.getAttribute('data-type')
+        name: btn.getAttribute('data-name'),
+        price: parseFloat(btn.getAttribute('data-price')),
+        img: btn.getAttribute('data-img'),
+        description: btn.getAttribute('data-description') || '',
+        quantity: 1
       };
 
       let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const existente = carrito.find(item => item.name === producto.name);
 
-      const yaExiste = carrito.some(item => item.name === producto.name);
-
-      if (!yaExiste) {
-        carrito.push(producto);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        alert(`${producto.name} agregado al carrito`);
+      if (existente) {
+        existente.quantity += 1;
       } else {
-        alert(`${producto.name} ya está en el carrito`);
+        carrito.push(producto);
       }
-    }
+
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      actualizarContadorCarrito();
+      alert("Producto agregado al carrito");
+    });
   });
 
-  // Actualiza si cambia localStorage desde otra pestaña
-  window.addEventListener('storage', e => {
-    if (e.key === 'items') renderItems();
-  });
+  function actualizarContadorCarrito() {
+    const cartCount = document.getElementById('cart-count');
+    if (!cartCount) return;
+
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const totalItems = carrito.reduce((acc, item) => acc + (item.quantity || 0), 0);
+
+    if (totalItems > 0) {
+      cartCount.textContent = totalItems;
+      cartCount.style.display = 'inline-block';
+    } else {
+      cartCount.style.display = 'none';
+    }
+  }
+
+  actualizarContadorCarrito();
 });

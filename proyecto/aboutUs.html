@@ -58,8 +58,9 @@
           <a class="nav-link" href="signup.html">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cart.html">
+          <a class="nav-link position-relative" id="cart-icon" href="cart.html">
             <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count">0</span>
           </a>
         </li>
       </ul>
@@ -274,7 +275,6 @@
 
   <!-- Animate.css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</body>
 <!--*Footer-->
 <footer class="footer bg-black text-white py-4 mt-5">
   <div class="container text-center">
@@ -297,26 +297,30 @@
     <div class="mb-3">
       <img src="imgs/logoCode&CutNavbar.png" alt="Logo" width="60" height="70" class="footer-logo">
     </div>
+ <!--*Inicio Footer-->
+<footer class="footer text-center">
+    <div class="container">
 
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a href="https://maps.google.com" target="_blank" class="social-icon">
-          <i class="bi bi-geo-alt-fill"></i>
-        </a>
+         <!-- Redes sociales -->
+      <div class="mb-3">
+        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fi fi-brands-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fi fi-brands-facebook"></i></a>
+        <a href="https://maps.google.com" target="_blank" class="social-icon"><i class="fi fi-rr-marker"></i></a>
       </div>
-      </div >
-            <p class="copyright d-flex justify-content-center ">
+
+      <!-- Copyright -->
+      <div class="row">
+        <div class="col-12">
+          <p class="copyright mb-0">
             &copy; 2025 Code&Cuts Barbería. Todos los derechos reservados.
-            </p>
+          </p>
         </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- WhatsApp floating -->
-  <a href="https://wa.me/5210000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-</footer>
 <!--*Fin de footer-->
-
+<!-- JAVASCRIPT-->
+<script src="js/cartAnimation.js"></script>
+</body>
 </html>
