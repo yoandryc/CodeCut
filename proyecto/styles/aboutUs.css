@@ -18,6 +18,13 @@ header h1,
 .subtitulo,
 .section-title {
   font-family: 'Bebas Neue', Arial, sans-serif;
+  color: #D9D9D9;
+  letter-spacing: 1px;
+}
+header h3,
+.subtitulo,
+.section-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
   color: #BEA654;
   letter-spacing: 1px;
 }
@@ -126,3 +133,4 @@ header h1,
 main {
   background: transparent !important;
 }
+

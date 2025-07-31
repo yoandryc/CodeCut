@@ -148,7 +148,7 @@ header h1,
 }
  /*!Carusel */
 .carousel-item {
-  height: 60vh;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   position: relative;
