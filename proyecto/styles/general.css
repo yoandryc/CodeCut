@@ -26,6 +26,12 @@ body {
   display: none;
 }
 
+.alert-custom-yellow {
+  background-color: #f0b35b !important; 
+  color: #000 !important;                
+  border: 1px solid #d9ac3a !important;  
+}
+
 /* CSS del Navbar*/
 .navbar {
   background-color: #000000;
