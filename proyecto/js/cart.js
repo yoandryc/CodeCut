@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const subtotalSpan = document.getElementById('subtotal');
   const totalSpan = document.getElementById('total-carrito');
   const btnComprar = document.getElementById('btn-comprar');
+  const alertContainer = document.getElementById('alert-container');
 
   // Intentamos cargar el carrito guardado en localStorage, si no hay, inicializamos vacío
   let carrito = [];
@@ -121,15 +122,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  btnComprar.addEventListener('click', () => {
-    if (carrito.length === 0) {
-      alert('El carrito está vacío. Agrega productos antes de comprar.');
-      return;
-    }
+  function mostrarAlertaBootstrap(mensaje, tipo = 'warning', duracion = 3500) {
+  const alertContainer = document.getElementById('alert-container');
+  if (!alertContainer) return;
+  
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = `
+    <div class="alert alert-${tipo} alert-dismissible fade show shadow" role="alert" style="font-weight: 600;">
+      ${mensaje}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+  `;
+  
+  alertContainer.appendChild(wrapper);
 
-    alert('Para continuar con la compra debes iniciar sesión o registrarte.');
+  setTimeout(() => {
+    const alert = bootstrap.Alert.getOrCreateInstance(wrapper.querySelector('.alert'));
+    alert.close();
+  }, duracion);
+}
+
+  btnComprar.addEventListener('click', () => {
+  if (carrito.length === 0) {
+    mostrarAlertaBootstrap('El carrito está vacío. Agrega productos antes de comprar.', 'custom-yellow');
+    return;
+  }
+  
+
+  mostrarAlertaBootstrap('Para continuar con la compra debes iniciar sesión o registrarte.', 'custom-yellow');
+  setTimeout(() => {
     window.location.href = 'signup.html';
-  });
+  }, 1500);
+});
 
   function actualizarContadorCarrito() {
     const cartCount = document.getElementById('cart-count');
